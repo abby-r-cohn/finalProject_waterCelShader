@@ -9,8 +9,8 @@
     text-align: left;
     font-weight: 300;
     font-family: 'Avenir';
-    color: #FFFFFF;
-    background-color: #000000
+    color: #000000;
+    background-color: #FFFFFF
   }
   h1, h2, h3, h4 {
     font-family: 'Avenir';
@@ -33,7 +33,17 @@
 
 <h2 align="middle">Project Overview</h2>
 
+<center>
+
 <p align="middle"> Our goal is to implement a stylized water shader such that it is easier to control colors, reflection, highlights of the water, and caustics. In the end, we want to create a shader that builds upon Maya’s Ocean Shader that gives artists the option to create water in a cel-shaded style and modify the shader such that it can simulate water-object interaction and potentially caustics. </p>
+
+<h2 align="middle">Problem Description</h2>
+
+<p>The three of us are currently working on an animated short film, in which we are aiming for an overall cel-shaded style. We have been using GLSL shaders as the main implementation for the cel shaded look on characters, assets, and sets. There is a scene that involves an ocean, and as of now we do not have a good solution for a cel shaded look. Currently, we are using the Maya ocean shader, but it is hard to match colors and reflections of the scenery/matte painting. It is also difficult to stylize the water to look more 2D instead of a realistic simulation. While we want to preserve some of the effects the default shader provides, we want to build upon those effects for the style to better match the rest of the short. </p>
+
+<h2 align="middle">Goals and Deliverables</h2>
+
+<p>We want our end product to be a shader that can applied to 3D objects in a program such as Maya, and this shader would have various attributes that can be changed or manipulated according to the artist’s visual style. Ocean Attributes will be a section that controls the “physics” of the water: wave speed, scale of the waves, and number of frequencies. Ideally, we will build on top of an OpenGL water shader to begin. To quantify how well our shader performs, we want to regularly compare our water’s style to the style of the characters, since they will be in the shot with the ocean directly behind them. We’ve included a render of the characters and our current ocean below. For us, a successful project is an ocean shader that looks cel-shaded, which also has attributes such as reflection and wave size that are able to be toggled. This shader will be applied to a flat plane to give the illusion of water that has height and depth. Ultimately, we want an end product that we can seamlessly integrate into our year-long animation project. </p>
 
 <br><br>
 
@@ -54,6 +64,9 @@
   </table>
 </div>
 <br><br>
+
+<p>Currently, the water shader looks like the following images, in which the highlights does not contrast very strongly with the rest of the water. We want to aim for something more along the lines of the two images below that from the Wind Waker, in which the water is mostly defined by a few colors and have strong contrasts with each other. This means matching the water to follow the style of the characters which is defined by a base, a bright highlight, and a darker shadow color. </p>
+
 <p align="middle"> Our End Goal Inspiration </p>
   <div align="middle">
   <table style="width=100%">
@@ -83,6 +96,52 @@
   </table>
 </div>
 
+<p>If the project goes well, and we are ahead of schedule, we want to implement the effects of the water’s interaction with objects in the scene. We currently have boats and docks sitting in the water, but there is no indication of how the objects disrupt the water. Ideally, we will implement ripples around objects that intersect our water shader, with ripple ring width being adjustable; splashes/foam; and different wave heights around intersecting objects depending on the wave direction.</p>
+
+</center>
+
+<h2 align="middle">Schedule</h2>
+
+<p> Week 0 (4/8 - 4/12) </p>
+<p>   Preliminary research: </p>
+<p>      -Finding source code with the OpenGL water shader and build upon</p>
+<p>      -Other helpful resources that build a foundation for our code</p>
+<p>      -Looking at Maya’s OceanShader source code as inspiration on how to format </p>
+<p>      Is caustic/”god rays” implementation possible? </p>
+<p> Week 1 (4/15 - 4/19)</p>
+<p>   Begin implementing cel shading: </p>
+<p>     -Ability to set highlight and shadow color cutoffs</p>
+<p>     -Ability to add overall color gradient (underneath highlight/shadows)</p>
+<p> Week 2 (4/22 - 4/26)</p>
+<p>   -Continue cel shading implementation</p>
+<p>   -Start water-object interactions against objects in our scene</p>
+<p>     -Ripples</p>
+<p>-Wave height</p>
+<p>-Splashes/foam</p>
+<p>Week 3 (4/29 - 5/3)</p>
+<p>-Finish cel shading implementation</p>
+<p>-Continue water-object interaction implementation</p>
+<p>4/30 (Tuesday): Grading Milestone!</p>
+<p>-(If possible): begin considering caustics/”god rays”</p>
+<p>Week 4 (5/6 - 5/10)</p>
+<p>-Finish water-object interactions (ripples, wave height, splashes/foam)</p>
+<p>-Continue caustics/”god rays”</p>
+<p>Week 5 (5/13 - 5/14)</p>
+<p>-Final writeup/video/reporting adjustments</p>
+
+<h2 align="middle">Resources</h2>
+
+<center> <a href = "https://sdm.scad.edu/faculty/mkesson/vsfx319/wip/best/best_fall2016/neil_waters/maya_shader_animation/index.html"> 2016 Maya Shader Project</a>
+<br>
+<a href = "https://github.com/IronWarrior/ToonWaterShader"> Toon Water Shader</a>
+<br>
+<a href = "https://github.com/teodorplop/OpenGL-Water"> Open GL Water</a>
+<br>
+<a href = "https://projekter.aau.dk/projekter/files/213101783/Thesis_final_writing.pdf"> Water Shader Thesis</a>
+<br>
+<a href = "https://www.youtube.com/watch?v=uje3oju3McQ “Maya: Floating on Texture Waves”"> Floating Objects on Texture waves</a>
+<br>
+<a href = "https://www.youtube.com/watch?v=p00b31mwPPg “Maya auto wave script”"> Maya auto-wave script</a> </center>
 
 
 
