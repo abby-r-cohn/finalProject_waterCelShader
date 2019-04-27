@@ -1,4 +1,8 @@
+#if !OGSFX
 #version 330
+#endif
+
+#if OGSFX
 
     uniform mat4 wp_matrix : WorldViewProjection;
     uniform mat4 w_matrix : World;
@@ -63,3 +67,5 @@
         vsOut.amCol = vec4(vNormalTotal, vDisp);
         vsOut.col_col0 = in_color0;
     }
+
+	#endif

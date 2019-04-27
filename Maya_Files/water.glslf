@@ -1,4 +1,8 @@
+#if !OGSFX
 #version 330
+#endif
+
+#if OGSFX
 
 // Pixel shader for normal visualization.
 GLSLShader PS_Normal
@@ -15,3 +19,5 @@ GLSLShader PS_Normal
 #endif
     }
 }
+
+#endif
