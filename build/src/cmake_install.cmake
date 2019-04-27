@@ -1,4 +1,4 @@
-# Install script for directory: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/src
+# Install script for directory: /Users/abbyrcohn/desktop/finalProject_waterCelShader/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,21 +34,21 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/clothsim")
+   "/Users/abbyrcohn/desktop/finalProject_waterCelShader/clothsim")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn" TYPE EXECUTABLE FILES "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/clothsim")
-  if(EXISTS "$ENV{DESTDIR}/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/clothsim" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/clothsim")
+file(INSTALL DESTINATION "/Users/abbyrcohn/desktop/finalProject_waterCelShader" TYPE EXECUTABLE FILES "/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/clothsim")
+  if(EXISTS "$ENV{DESTDIR}/Users/abbyrcohn/desktop/finalProject_waterCelShader/clothsim" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/abbyrcohn/desktop/finalProject_waterCelShader/clothsim")
     execute_process(COMMAND /usr/bin/install_name_tool
-      -delete_rpath "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui"
-      "$ENV{DESTDIR}/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/clothsim")
+      -delete_rpath "/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui"
+      "$ENV{DESTDIR}/Users/abbyrcohn/desktop/finalProject_waterCelShader/clothsim")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/clothsim")
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/abbyrcohn/desktop/finalProject_waterCelShader/clothsim")
     endif()
   endif()
 endif()

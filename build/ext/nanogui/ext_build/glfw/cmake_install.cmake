@@ -1,4 +1,4 @@
-# Install script for directory: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glfw
+# Install script for directory: /Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/cmake_install.cmake")
+  include("/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/cmake_install.cmake")
 
 endif()
 

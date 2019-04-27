@@ -7,11 +7,11 @@ C_FLAGS =  -Wno-deprecated-declarations -g -fPIC
 
 C_DEFINES = -DCORO_SJLJ -DGLAD_GLAPI_EXPORT -DNANOGUI_GLAD -DNANOGUI_SHARED -DNVG_SHARED -Dnanogui_EXPORTS
 
-C_INCLUDES = -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glad/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/eigen -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glfw/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/nanovg/src -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/coro 
+C_INCLUDES = -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glad/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/eigen -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glfw/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/nanovg/src -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/coro 
 
 CXX_FLAGS =  -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -stdlib=libc++ -g -fPIC  
 
 CXX_DEFINES = -DCORO_SJLJ -DGLAD_GLAPI_EXPORT -DNANOGUI_GLAD -DNANOGUI_SHARED -DNVG_SHARED -Dnanogui_EXPORTS
 
-CXX_INCLUDES = -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glad/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/eigen -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glfw/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/nanovg/src -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/coro 
+CXX_INCLUDES = -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glad/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/eigen -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glfw/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/nanovg/src -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/coro 
 

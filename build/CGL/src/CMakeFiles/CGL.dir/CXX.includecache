@@ -136,15 +136,15 @@ ostream
 cmath
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/base64.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/base64.cpp
 base64.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/base64.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/base64.h
 iostream
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/color.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/color.cpp
 color.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/color.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/color.h
 stdio.h
 -
 string.h
@@ -154,13 +154,13 @@ ostream
 sstream
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/complex.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/complex.cpp
 complex.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/complex.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/complex.h
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/lodepng.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/lodepng.cpp
 lodepng.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/lodepng.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/lodepng.h
 stdio.h
 -
 stdlib.h
@@ -168,29 +168,29 @@ stdlib.h
 fstream
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix3x3.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix3x3.cpp
 matrix3x3.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix3x3.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix3x3.h
 iostream
 -
 cmath
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix4x4.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix4x4.cpp
 matrix4x4.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix4x4.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix4x4.h
 iostream
 -
 cmath
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/quaternion.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/quaternion.cpp
 quaternion.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/quaternion.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/quaternion.h
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/spectrum.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/spectrum.cpp
 spectrum.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/spectrum.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/spectrum.h
 stdio.h
 -
 string.h
@@ -200,9 +200,9 @@ ostream
 sstream
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/tinyxml2.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/tinyxml2.cpp
 tinyxml2.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/tinyxml2.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/tinyxml2.h
 new
 -
 stddef.h
@@ -210,15 +210,15 @@ stddef.h
 cstddef
 -
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector2D.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector2D.cpp
 vector2D.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector2D.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector2D.h
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector3D.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector3D.cpp
 vector3D.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector3D.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector3D.h
 
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector4D.cpp
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector4D.cpp
 vector4D.h
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector4D.h
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector4D.h
 

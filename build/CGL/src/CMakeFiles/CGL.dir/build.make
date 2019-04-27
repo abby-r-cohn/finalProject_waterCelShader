@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.13.3/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn
+CMAKE_SOURCE_DIR = /Users/abbyrcohn/desktop/finalProject_waterCelShader
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build
+CMAKE_BINARY_DIR = /Users/abbyrcohn/desktop/finalProject_waterCelShader/build
 
 # Include any dependencies generated for this target.
 include CGL/src/CMakeFiles/CGL.dir/depend.make
@@ -59,159 +59,159 @@ include CGL/src/CMakeFiles/CGL.dir/flags.make
 
 CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o: ../CGL/src/vector2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/vector2D.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/vector2D.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector2D.cpp
 
 CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/vector2D.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector2D.cpp > CMakeFiles/CGL.dir/vector2D.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector2D.cpp > CMakeFiles/CGL.dir/vector2D.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/vector2D.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector2D.cpp -o CMakeFiles/CGL.dir/vector2D.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector2D.cpp -o CMakeFiles/CGL.dir/vector2D.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o: ../CGL/src/vector3D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/vector3D.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector3D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/vector3D.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector3D.cpp
 
 CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/vector3D.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector3D.cpp > CMakeFiles/CGL.dir/vector3D.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector3D.cpp > CMakeFiles/CGL.dir/vector3D.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/vector3D.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector3D.cpp -o CMakeFiles/CGL.dir/vector3D.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector3D.cpp -o CMakeFiles/CGL.dir/vector3D.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o: ../CGL/src/vector4D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/vector4D.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector4D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/vector4D.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector4D.cpp
 
 CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/vector4D.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector4D.cpp > CMakeFiles/CGL.dir/vector4D.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector4D.cpp > CMakeFiles/CGL.dir/vector4D.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/vector4D.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/vector4D.cpp -o CMakeFiles/CGL.dir/vector4D.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/vector4D.cpp -o CMakeFiles/CGL.dir/vector4D.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o: ../CGL/src/matrix3x3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/matrix3x3.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix3x3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/matrix3x3.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix3x3.cpp
 
 CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/matrix3x3.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix3x3.cpp > CMakeFiles/CGL.dir/matrix3x3.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix3x3.cpp > CMakeFiles/CGL.dir/matrix3x3.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/matrix3x3.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix3x3.cpp -o CMakeFiles/CGL.dir/matrix3x3.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix3x3.cpp -o CMakeFiles/CGL.dir/matrix3x3.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o: ../CGL/src/matrix4x4.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/matrix4x4.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix4x4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/matrix4x4.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix4x4.cpp
 
 CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/matrix4x4.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix4x4.cpp > CMakeFiles/CGL.dir/matrix4x4.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix4x4.cpp > CMakeFiles/CGL.dir/matrix4x4.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/matrix4x4.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/matrix4x4.cpp -o CMakeFiles/CGL.dir/matrix4x4.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/matrix4x4.cpp -o CMakeFiles/CGL.dir/matrix4x4.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o: ../CGL/src/quaternion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/quaternion.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/quaternion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/quaternion.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/quaternion.cpp
 
 CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/quaternion.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/quaternion.cpp > CMakeFiles/CGL.dir/quaternion.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/quaternion.cpp > CMakeFiles/CGL.dir/quaternion.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/quaternion.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/quaternion.cpp -o CMakeFiles/CGL.dir/quaternion.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/quaternion.cpp -o CMakeFiles/CGL.dir/quaternion.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/complex.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/complex.cpp.o: ../CGL/src/complex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CGL/src/CMakeFiles/CGL.dir/complex.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/complex.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/complex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CGL/src/CMakeFiles/CGL.dir/complex.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/complex.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/complex.cpp
 
 CGL/src/CMakeFiles/CGL.dir/complex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/complex.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/complex.cpp > CMakeFiles/CGL.dir/complex.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/complex.cpp > CMakeFiles/CGL.dir/complex.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/complex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/complex.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/complex.cpp -o CMakeFiles/CGL.dir/complex.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/complex.cpp -o CMakeFiles/CGL.dir/complex.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/color.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/color.cpp.o: ../CGL/src/color.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CGL/src/CMakeFiles/CGL.dir/color.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/color.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/color.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CGL/src/CMakeFiles/CGL.dir/color.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/color.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/color.cpp
 
 CGL/src/CMakeFiles/CGL.dir/color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/color.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/color.cpp > CMakeFiles/CGL.dir/color.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/color.cpp > CMakeFiles/CGL.dir/color.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/color.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/color.cpp -o CMakeFiles/CGL.dir/color.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/color.cpp -o CMakeFiles/CGL.dir/color.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o: ../CGL/src/spectrum.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/spectrum.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/spectrum.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/spectrum.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/spectrum.cpp
 
 CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/spectrum.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/spectrum.cpp > CMakeFiles/CGL.dir/spectrum.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/spectrum.cpp > CMakeFiles/CGL.dir/spectrum.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/spectrum.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/spectrum.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/spectrum.cpp -o CMakeFiles/CGL.dir/spectrum.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/spectrum.cpp -o CMakeFiles/CGL.dir/spectrum.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/base64.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/base64.cpp.o: ../CGL/src/base64.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CGL/src/CMakeFiles/CGL.dir/base64.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/base64.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/base64.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CGL/src/CMakeFiles/CGL.dir/base64.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/base64.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/base64.cpp
 
 CGL/src/CMakeFiles/CGL.dir/base64.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/base64.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/base64.cpp > CMakeFiles/CGL.dir/base64.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/base64.cpp > CMakeFiles/CGL.dir/base64.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/base64.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/base64.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/base64.cpp -o CMakeFiles/CGL.dir/base64.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/base64.cpp -o CMakeFiles/CGL.dir/base64.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o: ../CGL/src/lodepng.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/lodepng.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/lodepng.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/lodepng.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/lodepng.cpp
 
 CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/lodepng.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/lodepng.cpp > CMakeFiles/CGL.dir/lodepng.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/lodepng.cpp > CMakeFiles/CGL.dir/lodepng.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/lodepng.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/lodepng.cpp -o CMakeFiles/CGL.dir/lodepng.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/lodepng.cpp -o CMakeFiles/CGL.dir/lodepng.cpp.s
 
 CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o: CGL/src/CMakeFiles/CGL.dir/flags.make
 CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o: ../CGL/src/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/tinyxml2.cpp.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CGL.dir/tinyxml2.cpp.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/tinyxml2.cpp
 
 CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CGL.dir/tinyxml2.cpp.i"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/tinyxml2.cpp > CMakeFiles/CGL.dir/tinyxml2.cpp.i
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/tinyxml2.cpp > CMakeFiles/CGL.dir/tinyxml2.cpp.i
 
 CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CGL.dir/tinyxml2.cpp.s"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src/tinyxml2.cpp -o CMakeFiles/CGL.dir/tinyxml2.cpp.s
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src/tinyxml2.cpp -o CMakeFiles/CGL.dir/tinyxml2.cpp.s
 
 # Object files for target CGL
 CGL_OBJECTS = \
@@ -245,9 +245,9 @@ CGL/src/libCGL.a: CGL/src/CMakeFiles/CGL.dir/lodepng.cpp.o
 CGL/src/libCGL.a: CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o
 CGL/src/libCGL.a: CGL/src/CMakeFiles/CGL.dir/build.make
 CGL/src/libCGL.a: CGL/src/CMakeFiles/CGL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libCGL.a"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && $(CMAKE_COMMAND) -P CMakeFiles/CGL.dir/cmake_clean_target.cmake
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CGL.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX static library libCGL.a"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && $(CMAKE_COMMAND) -P CMakeFiles/CGL.dir/cmake_clean_target.cmake
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CGL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CGL/src/CMakeFiles/CGL.dir/build: CGL/src/libCGL.a
@@ -255,10 +255,10 @@ CGL/src/CMakeFiles/CGL.dir/build: CGL/src/libCGL.a
 .PHONY : CGL/src/CMakeFiles/CGL.dir/build
 
 CGL/src/CMakeFiles/CGL.dir/clean:
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src && $(CMAKE_COMMAND) -P CMakeFiles/CGL.dir/cmake_clean.cmake
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src && $(CMAKE_COMMAND) -P CMakeFiles/CGL.dir/cmake_clean.cmake
 .PHONY : CGL/src/CMakeFiles/CGL.dir/clean
 
 CGL/src/CMakeFiles/CGL.dir/depend:
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/CGL/src /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/src/CMakeFiles/CGL.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abbyrcohn/desktop/finalProject_waterCelShader /Users/abbyrcohn/desktop/finalProject_waterCelShader/CGL/src /Users/abbyrcohn/desktop/finalProject_waterCelShader/build /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/src/CMakeFiles/CGL.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CGL/src/CMakeFiles/CGL.dir/depend
 

@@ -6,5 +6,5 @@ C_FLAGS =  -Wno-deprecated-declarations -g -fPIC   -Wall -Wno-deprecated-declara
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glfw/include -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glfw/src -I/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src 
+C_INCLUDES = -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glfw/include -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glfw/src -I/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src 
 

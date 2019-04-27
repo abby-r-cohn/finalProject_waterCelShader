@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is AppleClang, found in "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/3.13.3/CompilerIdC/a.out"
+The C compiler identification is AppleClang, found in "/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/3.13.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
@@ -23,38 +23,38 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is AppleClang, found in "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/3.13.3/CompilerIdCXX/a.out"
+The CXX compiler identification is AppleClang, found in "/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/3.13.3/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_8e64b/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_8e64b.dir/build.make CMakeFiles/cmTC_8e64b.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8e64b.dir/testCCompiler.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_8e64b.dir/testCCompiler.c.o   -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_8e64b
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e64b.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_8e64b.dir/testCCompiler.c.o  -o cmTC_8e64b 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_5dad9/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_5dad9.dir/build.make CMakeFiles/cmTC_5dad9.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5dad9.dir/testCCompiler.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_5dad9.dir/testCCompiler.c.o   -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5dad9
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dad9.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5dad9.dir/testCCompiler.c.o  -o cmTC_5dad9 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_95d60/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_95d60.dir/build.make CMakeFiles/cmTC_95d60.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_95d60
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95d60.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o  -o cmTC_95d60 
+Run Build Command:"/usr/local/bin/gmake" "cmTC_0ee2c/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_0ee2c.dir/build.make CMakeFiles/cmTC_0ee2c.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_0ee2c
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ee2c.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o  -o cmTC_0ee2c 
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 Target: x86_64-apple-darwin17.7.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_95d60 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_0ee2c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-409.12
 BUILD 17:47:51 Sep 25 2018
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em arm64e arm64_32
@@ -64,26 +64,26 @@ Library search paths:
 Framework search paths:
 	/Library/Frameworks/
 	/System/Library/Frameworks/
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_95d60/fast"]
-  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_95d60.dir/build.make CMakeFiles/cmTC_95d60.dir/build]
-  ignore line: [gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_95d60]
-  ignore line: [/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95d60.dir/link.txt --verbose=1]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o  -o cmTC_95d60 ]
+  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_0ee2c/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_0ee2c.dir/build.make CMakeFiles/cmTC_0ee2c.dir/build]
+  ignore line: [gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -o CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_0ee2c]
+  ignore line: [/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ee2c.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o  -o cmTC_0ee2c ]
   ignore line: [Apple LLVM version 10.0.0 (clang-1000.11.45.5)]
   ignore line: [Target: x86_64-apple-darwin17.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_95d60 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_0ee2c -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -94,11 +94,11 @@ Parsed C implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.13.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_95d60] ==> ignore
+    arg [cmTC_0ee2c] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_95d60.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_0ee2c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
   Library search paths: [;/usr/lib;/usr/local/lib]
@@ -117,17 +117,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_9bd87/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_9bd87.dir/build.make CMakeFiles/cmTC_9bd87.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9bd87.dir/feature_tests.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_9bd87.dir/feature_tests.c.o   -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_9bd87
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bd87.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_9bd87.dir/feature_tests.c.o  -o cmTC_9bd87 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_f892c/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_f892c.dir/build.make CMakeFiles/cmTC_f892c.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f892c.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_f892c.dir/feature_tests.c.o   -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f892c
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f892c.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f892c.dir/feature_tests.c.o  -o cmTC_f892c 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -137,17 +137,17 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_47871/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_47871.dir/build.make CMakeFiles/cmTC_47871.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_47871.dir/feature_tests.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_47871.dir/feature_tests.c.o   -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_47871
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47871.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_47871.dir/feature_tests.c.o  -o cmTC_47871 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_2b45f/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_2b45f.dir/build.make CMakeFiles/cmTC_2b45f.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2b45f.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_2b45f.dir/feature_tests.c.o   -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2b45f
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b45f.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2b45f.dir/feature_tests.c.o  -o cmTC_2b45f 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -157,17 +157,17 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_7c4a2/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_7c4a2.dir/build.make CMakeFiles/cmTC_7c4a2.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7c4a2.dir/feature_tests.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_7c4a2.dir/feature_tests.c.o   -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7c4a2
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c4a2.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7c4a2.dir/feature_tests.c.o  -o cmTC_7c4a2 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_2bc5f/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_2bc5f.dir/build.make CMakeFiles/cmTC_2bc5f.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2bc5f.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_2bc5f.dir/feature_tests.c.o   -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2bc5f
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2bc5f.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_2bc5f.dir/feature_tests.c.o  -o cmTC_2bc5f 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -175,35 +175,35 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_3e005/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_3e005.dir/build.make CMakeFiles/cmTC_3e005.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3e005.dir/testCXXCompiler.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_3e005.dir/testCXXCompiler.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_3e005
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e005.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_3e005.dir/testCXXCompiler.cxx.o  -o cmTC_3e005 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_4b59d/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_4b59d.dir/build.make CMakeFiles/cmTC_4b59d.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4b59d.dir/testCXXCompiler.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_4b59d.dir/testCXXCompiler.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_4b59d
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b59d.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4b59d.dir/testCXXCompiler.cxx.o  -o cmTC_4b59d 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_8bd70/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_8bd70.dir/build.make CMakeFiles/cmTC_8bd70.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_8bd70
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bd70.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8bd70 
+Run Build Command:"/usr/local/bin/gmake" "cmTC_d23b4/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_d23b4.dir/build.make CMakeFiles/cmTC_d23b4.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_d23b4
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d23b4.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d23b4 
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 Target: x86_64-apple-darwin17.7.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_8bd70 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_d23b4 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a
 @(#)PROGRAM:ld  PROJECT:ld64-409.12
 BUILD 17:47:51 Sep 25 2018
 configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em arm64e arm64_32
@@ -213,26 +213,26 @@ Library search paths:
 Framework search paths:
 	/Library/Frameworks/
 	/System/Library/Frameworks/
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_8bd70/fast"]
-  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_8bd70.dir/build.make CMakeFiles/cmTC_8bd70.dir/build]
-  ignore line: [gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_8bd70]
-  ignore line: [/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bd70.dir/link.txt --verbose=1]
-  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_8bd70 ]
+  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_d23b4/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_d23b4.dir/build.make CMakeFiles/cmTC_d23b4.dir/build]
+  ignore line: [gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -o CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_d23b4]
+  ignore line: [/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d23b4.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_d23b4 ]
   ignore line: [Apple LLVM version 10.0.0 (clang-1000.11.45.5)]
   ignore line: [Target: x86_64-apple-darwin17.7.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_8bd70 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -o cmTC_d23b4 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
     arg [-lto_library] ==> ignore, skip following value
@@ -243,11 +243,11 @@ Parsed CXX implicit link information from above output:
     arg [-macosx_version_min] ==> ignore
     arg [10.13.0] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_8bd70] ==> ignore
+    arg [cmTC_d23b4] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
     arg [-v] ==> ignore
-    arg [CMakeFiles/cmTC_8bd70.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_d23b4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
@@ -267,17 +267,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_6766b/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_6766b.dir/build.make CMakeFiles/cmTC_6766b.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6766b.dir/feature_tests.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_6766b.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6766b
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6766b.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6766b.dir/feature_tests.cxx.o  -o cmTC_6766b 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_18939/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_18939.dir/build.make CMakeFiles/cmTC_18939.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_18939.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_18939.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_18939
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18939.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_18939.dir/feature_tests.cxx.o  -o cmTC_18939 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -340,17 +340,17 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_cfaef/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_cfaef.dir/build.make CMakeFiles/cmTC_cfaef.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cfaef.dir/feature_tests.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_cfaef.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_cfaef
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfaef.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_cfaef.dir/feature_tests.cxx.o  -o cmTC_cfaef 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_b94f2/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_b94f2.dir/build.make CMakeFiles/cmTC_b94f2.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b94f2.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_b94f2.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b94f2
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b94f2.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b94f2.dir/feature_tests.cxx.o  -o cmTC_b94f2 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -413,17 +413,17 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_76287/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_76287.dir/build.make CMakeFiles/cmTC_76287.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_76287.dir/feature_tests.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_76287.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_76287
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76287.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_76287.dir/feature_tests.cxx.o  -o cmTC_76287 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_94b13/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_94b13.dir/build.make CMakeFiles/cmTC_94b13.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_94b13.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_94b13.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_94b13
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94b13.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_94b13.dir/feature_tests.cxx.o  -o cmTC_94b13 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -486,17 +486,17 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_5081a/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_5081a.dir/build.make CMakeFiles/cmTC_5081a.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5081a.dir/feature_tests.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_5081a.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5081a
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5081a.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5081a.dir/feature_tests.cxx.o  -o cmTC_5081a 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_64a5a/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_64a5a.dir/build.make CMakeFiles/cmTC_64a5a.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_64a5a.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_64a5a.dir/feature_tests.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_64a5a
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64a5a.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_64a5a.dir/feature_tests.cxx.o  -o cmTC_64a5a 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -557,33 +557,33 @@ gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/bu
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_47ffa/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_47ffa.dir/build.make CMakeFiles/cmTC_47ffa.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_47ffa.dir/CheckIncludeFile.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wno-deprecated-declarations    -o CMakeFiles/cmTC_47ffa.dir/CheckIncludeFile.c.o   -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_47ffa
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47ffa.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_47ffa.dir/CheckIncludeFile.c.o  -o cmTC_47ffa 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_89094/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_89094.dir/build.make CMakeFiles/cmTC_89094.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_89094.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wno-deprecated-declarations    -o CMakeFiles/cmTC_89094.dir/CheckIncludeFile.c.o   -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_89094
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89094.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_89094.dir/CheckIncludeFile.c.o  -o cmTC_89094 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the pthread_create exist passed with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_7c181/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_7c181.dir/build.make CMakeFiles/cmTC_7c181.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7c181.dir/CheckSymbolExists.c.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wno-deprecated-declarations    -o CMakeFiles/cmTC_7c181.dir/CheckSymbolExists.c.o   -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_7c181
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c181.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7c181.dir/CheckSymbolExists.c.o  -o cmTC_7c181 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_456ad/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_456ad.dir/build.make CMakeFiles/cmTC_456ad.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_456ad.dir/CheckSymbolExists.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wno-deprecated-declarations    -o CMakeFiles/cmTC_456ad.dir/CheckSymbolExists.c.o   -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_456ad
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_456ad.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_456ad.dir/CheckSymbolExists.c.o  -o cmTC_456ad 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
-File /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -599,77 +599,77 @@ int main(int argc, char** argv)
 }
 
 Performing C++ SOURCE FILE Test HAS_CPP14_FLAG succeeded with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_cfdd1/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_cfdd1.dir/build.make CMakeFiles/cmTC_cfdd1.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cfdd1.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP14_FLAG   -std=c++14 -o CMakeFiles/cmTC_cfdd1.dir/src.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_cfdd1
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfdd1.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP14_FLAG -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_cfdd1.dir/src.cxx.o  -o cmTC_cfdd1 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_94147/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_94147.dir/build.make CMakeFiles/cmTC_94147.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_94147.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP14_FLAG   -std=c++14 -o CMakeFiles/cmTC_94147.dir/src.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_94147
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94147.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP14_FLAG -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_94147.dir/src.cxx.o  -o cmTC_94147 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test HAS_CPP11_FLAG succeeded with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_bd98a/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_bd98a.dir/build.make CMakeFiles/cmTC_bd98a.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bd98a.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP11_FLAG   -std=c++11 -o CMakeFiles/cmTC_bd98a.dir/src.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_bd98a
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd98a.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP11_FLAG -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_bd98a.dir/src.cxx.o  -o cmTC_bd98a 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/local/bin/gmake" "cmTC_e3eff/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_e3eff.dir/build.make CMakeFiles/cmTC_e3eff.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e3eff.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP11_FLAG   -std=c++11 -o CMakeFiles/cmTC_e3eff.dir/src.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e3eff
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3eff.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -DHAS_CPP11_FLAG -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e3eff.dir/src.cxx.o  -o cmTC_e3eff 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 Source file was:
 int main() { return 0; }
 Performing C++ SOURCE FILE Test HAS_LIBCPP succeeded with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_fc1cf/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_fc1cf.dir/build.make CMakeFiles/cmTC_fc1cf.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fc1cf.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -DHAS_LIBCPP -stdlib=libc++   -o CMakeFiles/cmTC_fc1cf.dir/src.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
+Run Build Command:"/usr/local/bin/gmake" "cmTC_9ef26/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_9ef26.dir/build.make CMakeFiles/cmTC_9ef26.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9ef26.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -DHAS_LIBCPP -stdlib=libc++   -o CMakeFiles/cmTC_9ef26.dir/src.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
 int main(int argc, char **argv) { return 0; }
              ^
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
 int main(int argc, char **argv) { return 0; }
                           ^
 2 warnings generated.
-Linking CXX executable cmTC_fc1cf
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc1cf.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -DHAS_LIBCPP -stdlib=libc++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fc1cf.dir/src.cxx.o  -o cmTC_fc1cf -stdlib=libc++ 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Linking CXX executable cmTC_9ef26
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ef26.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -DHAS_LIBCPP -stdlib=libc++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_9ef26.dir/src.cxx.o  -o cmTC_9ef26 -stdlib=libc++ 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 Return value: 1
 Source file was:
 int main(int argc, char **argv) { return 0; }
 Performing C++ SOURCE FILE Test HAS_LIBCPPABI succeeded with the following output:
-Change Dir: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/local/bin/gmake" "cmTC_e900f/fast"
-/usr/local/bin/gmake -f CMakeFiles/cmTC_e900f.dir/build.make CMakeFiles/cmTC_e900f.dir/build
-gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e900f.dir/src.cxx.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -stdlib=libc++ -DHAS_LIBCPPABI -stdlib=libc++   -o CMakeFiles/cmTC_e900f.dir/src.cxx.o -c /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
+Run Build Command:"/usr/local/bin/gmake" "cmTC_7477c/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_7477c.dir/build.make CMakeFiles/cmTC_7477c.dir/build
+gmake[1]: Entering directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7477c.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++    -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -stdlib=libc++ -DHAS_LIBCPPABI -stdlib=libc++   -o CMakeFiles/cmTC_7477c.dir/src.cxx.o -c /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx:1:14: warning: unused parameter 'argc' [-Wunused-parameter]
 int main(int argc, char **argv) { return 0; }
              ^
-/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
+/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp/src.cxx:1:27: warning: unused parameter 'argv' [-Wunused-parameter]
 int main(int argc, char **argv) { return 0; }
                           ^
 2 warnings generated.
-Linking CXX executable cmTC_e900f
-/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e900f.dir/link.txt --verbose=1
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -stdlib=libc++ -DHAS_LIBCPPABI -stdlib=libc++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e900f.dir/src.cxx.o  -o cmTC_e900f -stdlib=libc++ -lc++abi 
-gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles/CMakeTmp'
+Linking CXX executable cmTC_7477c
+/usr/local/Cellar/cmake/3.13.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7477c.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=c++11 -m64 -g -Wall -Wextra -std=c++14 -stdlib=libc++ -DHAS_LIBCPPABI -stdlib=libc++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7477c.dir/src.cxx.o  -o cmTC_7477c -stdlib=libc++ -lc++abi 
+gmake[1]: Leaving directory '/Users/abbyrcohn/Desktop/finalProject_waterCelShader/build/CMakeFiles/CMakeTmp'
 
 Return value: 1
 Source file was:

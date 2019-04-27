@@ -1,4 +1,4 @@
-# Install script for directory: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui/ext/glfw/src
+# Install script for directory: /Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui/ext/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -8,15 +8,14 @@
     margin: auto;
     text-align: left;
     font-weight: 300;
-    font-family: 'Avenir';
-    color: #000000;
-    background-color: #FFFFFF
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
   }
   h1, h2, h3, h4 {
-    font-family: 'Avenir';
+    font-family: 'Source Sans Pro', sans-serif;
   }
 </style>
-<title>CS 184 Water Cel Shader</title>
+<title>CS 184 Cloth Simulation</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 </head>
@@ -25,125 +24,363 @@
 <body>
 
 <h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
-<br>
-<h1 align="middle">Final Project Proposal: Water Cel Shader</h1>
-<h2 align="middle">Abby Cohn, Ashna Choudhury, & Beverly Pan</h2>
-
-<br> <br><br>
-
-<h2 align="middle">Project Overview</h2>
-
-<center>
-
-<p align="middle"> Our goal is to implement a stylized water shader such that it is easier to control colors, reflection, highlights of the water, and caustics. In the end, we want to create a shader that builds upon Maya’s Ocean Shader that gives artists the option to create water in a cel-shaded style and modify the shader such that it can simulate water-object interaction and potentially caustics. </p>
-
-<h2 align="middle">Problem Description</h2>
-
-<p>The three of us are currently working on an animated short film, in which we are aiming for an overall cel-shaded style. We have been using GLSL shaders as the main implementation for the cel shaded look on characters, assets, and sets. There is a scene that involves an ocean, and as of now we do not have a good solution for a cel shaded look. Currently, we are using the Maya ocean shader, but it is hard to match colors and reflections of the scenery/matte painting. It is also difficult to stylize the water to look more 2D instead of a realistic simulation. While we want to preserve some of the effects the default shader provides, we want to build upon those effects for the style to better match the rest of the short. </p>
-
-<h2 align="middle">Goals and Deliverables</h2>
-
-<p>We want our end product to be a shader that can applied to 3D objects in a program such as Maya, and this shader would have various attributes that can be changed or manipulated according to the artist’s visual style. Ocean Attributes will be a section that controls the “physics” of the water: wave speed, scale of the waves, and number of frequencies. Ideally, we will build on top of an OpenGL water shader to begin. To quantify how well our shader performs, we want to regularly compare our water’s style to the style of the characters, since they will be in the shot with the ocean directly behind them. We’ve included a render of the characters and our current ocean below. For us, a successful project is an ocean shader that looks cel-shaded, which also has attributes such as reflection and wave size that are able to be toggled. This shader will be applied to a flat plane to give the illusion of water that has height and depth. Ultimately, we want an end product that we can seamlessly integrate into our year-long animation project. </p>
+<h1 align="middle">Project 4: Cloth Simulator</h1>
+<h2 align="middle">Abby Cohn, CS184-acy</h2>
 
 <br><br>
 
-<p align="middle"> Our Current Water Scene and Characters </p>
-  <div align="middle">
-  <table style="width=100%">
-    <tr>
-      <td>
-        <img src="images/currentWater1.png" align="middle" width="500px"/>
-        <figcaption align="middle"></figcaption>
-      </td>
-      <td>
-        <img src="images/currentWater2.png" align="middle" width="400px"/>
-        <figcaption align="middle"></figcaption>
-      </td>
-    </tr>
-    <br>
-  </table>
-</div>
-<br><br>
+<div>
 
-<p>Currently, the water shader looks like the above images, in which the highlights do not contrast very strongly with the rest of the water. We want to aim for something more along the lines of the two images belowfrom the Wind Waker, in which the water is mostly defined by a few colors and have strong contrasts with each other. This means matching the water to follow the style of the characters which is defined by a base color, a bright highlight, and a darker shadow color. </p>
+<h2 align="middle">Overview</h2>
+<p>In this project, I implemented a cloth simulator and a series of Open GL shaders. From the building of the cloth structure of masses and springs to handling collisions with other objects and the cloth itself, it was interesting to see how different data structures are helpful in speeding up simulation. It was also fascinating to implement different shaders while learning a language which was made specifically for real-time shading. </p>
 
-<p align="middle"> Our End Goal Inspiration </p>
-  <div align="middle">
+<h2 align="middle">Part I: Masses and Springs</h2>
+
+<p> To represent the masses and springs in 1D vectors, I first added all of the elements to the data structures using row-major order: [num_width_points * y + x]. The grid of masses contains num_width_points by num_height_points, so we perform the following operations num_total_mass times. With a horizontal cloth orientation, I set the y coordinate for every point mass to 1, since the material is completely flat. Otherwise, the orientation is vertical and we need a randomly generated offset for the z coordinate. In both cases, the remaining coordinates were calculated by varying positions over the xz or xy planes. I also set the mass’s pinned boolean to true for each mass contained in the pinned vector. I created the springs next by applying the structural, bending, and shearing constraints. I added each based off of certain conditions about which masses each type of constraint can exist between. </p>
+
+<div align="middle">
   <table style="width=100%">
     <tr>
       <td>
-        <img src="images/celshaded1.png" align="middle" width="500px"/>
-        <figcaption align="middle"></figcaption>
+        <img src="images/all_constraints.png" width="450px" />
+                    <figcaption align="middle">structural, shearing, and bending</figcaption>
       </td>
       <td>
-        <img src="images/celshaded2.png" align="middle" width="500px"/>
-        <figcaption align="middle"></figcaption>
-      </td>
-    </tr>
-    <br>
-  </table>
-</div>
-</div>
-  <div align="middle">
-  <table style="width=100%">
-    <tr>
-      <td>
-        <img src="images/celshaded3.png" align="middle" width="400px"/>
-        <figcaption align="middle"></figcaption>
+         <img src="images/just_shear.png" width="450px" />
+                    <figcaption align="middle">shear only</figcaption>
       </td>
     </tr>
     <br>
   </table>
 </div>
 
-<p>If the project goes well, and we are ahead of schedule, we want to implement the effects of the water’s interaction with objects in the scene. We currently have boats and docks sitting in the water, but there is no indication of how the objects disrupt the water. Ideally, we will implement ripples around objects that intersect our water shader, with ripple ring width being adjustable; splashes/foam; and different wave heights around intersecting objects depending on the wave direction. Another thing we would like to implement if we are ahead of time is the reflection of the water shining on objects it interacts with such as the boats or docks in the scene.</p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/no_shear.png" width="450px" />
+        <figcaption align="middle">structural and bending</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
 
-</center>
+<h2 align="middle">Part II: Simulation via Numerical Integration</h2>
 
-<h2 align="middle">Schedule</h2>
+<p>The next part involved applying forces to point masses to simulate realistic movement. I calculated both external forces like gravity and spring correction forces. To get the total external force, I summed up all of the external accelerations and multiplied by the mass. For the correction forces, I used Hooke’s Law to compute the force applied to the point masses that connect the spring. I multiplied the spring constant by the magnitude of the distance between masses and subtracted the spring’s rest length. This is the force for one mass and the other has an equal (but opposite) force. Next, I used Verlet integration to calculate new point mass positions. To simulate damping, I multiplied a damping percentage by the difference between our new and last positions. I added the total acceleration and multiplied by the time-step squared. I add all of this to the current position, storing the position from the last time step as well. Fiinally , I made sure to constrain position updates by making sure that the spring’s new length is at most 10% greater than its rest length. I scaled with a correction vector and made sure that the vector direction was unchanged. </p>
 
-<p> <u> Week 0 (4/8 - 4/12) </u> </p> 
-<p>   Preliminary research: </p>
-<p>      &emsp; &emsp;-Finding source code with the OpenGL water shader and build upon</p>
-<p>      &emsp; &emsp;-Other helpful resources that build a foundation for our code</p>
-<p>      &emsp; &emsp;-Looking at Maya’s OceanShader source code as inspiration on how to format </p>
-<p>      &emsp; &emsp;-Is caustic/”god rays” implementation possible? </p>
-<p> <u> Week 1 (4/15 - 4/19) </u> </p>
-<p>   Begin implementing cel shading: </p>
-<p>     &emsp; &emsp;-Ability to set highlight and shadow color cutoffs</p>
-<p>     &emsp; &emsp;-Ability to add overall color gradient (underneath highlight/shadows)</p>
-<p> <u> Week 2 (4/22 - 4/26) </u> </p>
-<p>   Continue cel shading implementation</p>
-<p>   Start water-object interactions against objects in our scene</p>
-<p>     &emsp; &emsp; -Ripples</p>
-<p> 	&emsp; &emsp; -Wave height</p>
-<p>		&emsp; &emsp; -Splashes/foam</p>
-<p> <u> Week 3 (4/29 - 5/3) </u> </p>
-<p> Finish cel shading implementation</p>
-<p> Continue water-object interaction implementation</p>
-<p> <u> 4/30 (Tuesday): Grading Milestone! </u> </p>
-<p> (If possible): begin considering caustics/”god rays”</p>
-<p> <u> Week 4 (5/6 - 5/10) </u> </p>
-<p> Finish water-object interactions (ripples, wave height, splashes/foam)</p>
-<p> Continue caustics/”god rays”</p>
-<p> <u> Week 5 (5/13 - 5/14) </u> </p>
-<p> Final writeup/video/reporting adjustments</p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/default_settings.png" width="450px" />
+        <figcaption align="middle">density: 15 g/cm^2 & ks: 5000 N/m</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/ks_9000.png" width="450px" />
+                    <figcaption align="middle">ks 9000</figcaption>
+      </td>
+      <td>
+         <img src="images/ks_1000.png" width="450px" />
+                    <figcaption align="middle">ks 1000</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<p>Changing the spring constant ks creates visible changes in the cloth. When the constant is increased, the cloth springs up a little and it appears lighter in the simulation overall. When the constant is decreased, the cloth droops deeper and creates an effect of being much heavier. 
+</p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/density_1.png" width="450px" />
+                    <figcaption align="middle">density 1</figcaption>
+      </td>
+      <td>
+         <img src="images/density_100.png" width="450px" />
+                    <figcaption align="middle">density 100</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<p>I decreased the density to 1, which made the cloth super light. There were barely any folds and it looked almost paper-like. When increasing the density to 100, the cloth hangs lower and has much deeper folds, when comparing it to the default density of 15. 
+</p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/damping.1.png" width="450px" />
+                    <figcaption align="middle">damping 0.1</figcaption>
+      </td>
+      <td>
+         <img src="images/damping.9.png" width="450px" />
+                    <figcaption align="middle">damping 0.9</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<p>Turning down the damping causes more oscillation in the cloth. To slow down the oscillation, we increase the damping which acts opposite to the direction of motion. </p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/30_1000.png" width="450px" />
+        <figcaption align="middle">pinned4 with density: 30 g/cm^2 & ks: 1000 N/m</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
 
-<h2 align="middle">Resources</h2>
+<h2 align="middle">Part III: Handling Collisions With Other Objects</h2>
 
-<center> <a href = "https://sdm.scad.edu/faculty/mkesson/vsfx319/wip/best/best_fall2016/neil_waters/maya_shader_animation/index.html"> 2016 Maya Shader Project</a>
-<br>
-<a href = "https://github.com/IronWarrior/ToonWaterShader"> Toon Water Shader</a>
-<br>
-<a href = "https://github.com/teodorplop/OpenGL-Water"> Open GL Water</a>
-<br>
-<a href = "https://projekter.aau.dk/projekter/files/213101783/Thesis_final_writing.pdf"> Water Shader Thesis</a>
-<br>
-<a href = "https://www.youtube.com/watch?v=uje3oju3McQ “Maya: Floating on Texture Waves”"> Floating Objects on Texture waves</a>
-<br>
-<a href = "https://www.youtube.com/watch?v=p00b31mwPPg “Maya auto wave script”"> Maya auto-wave script</a> </center>
+<p>I first handled collisions with spheres, which was a bit simpler for me than intersection with planes. I calculated where the point masses should have rested on the spheres surface by comparing the distance from the origin to the point mass’s position to the radius of the sphere. I computed a correction vector using the surface intersection tangent point and applied it to the last position of the point mass and scaled by friction. I updated the simulate method to test for intersection with all of the collision objects, as well. For plane intersection, if the point mass passes over the plane, I calculate a tangent point of where the mass should have rested. Using dot products of the mass’s current and last positions with the normal, I could determine whether that mass has passed through the plane or not. If so, I use the tangent point, a correction vector, and a small surface offset to adjust the mass’s last position, finally setting it to the current position. </p>
+
+<p>With a larger ks value, the cloth has less weight and bounces back up towards the top of the sphere when changed mid-simulation. With a lower ks, the cloth begins to droop more.</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/500.png" width="450px" />
+                    <figcaption align="middle">ks 500</figcaption>
+      </td>
+      <td>
+         <img src="images/5000.png" width="450px" />
+                    <figcaption align="middle">ks 5000</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/50000.png" width="450px" />
+        <figcaption align="middle">ks 50000</figcaption>
+      </td>
+      <td>
+        <img src="images/plane.png" width="450px" />
+        <figcaption align="middle">plane intersection</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
 
 
+<h2 align="middle">Part IV: Handling Self-Collisions</h2>
+<p>In order to keep the cloth from clipping though itself, I implemented a fix for self-collisions. Instead of looping through each pair of point masses, I used spatial hashing. Spatial hashing involves mapping a float to a vector of point masses. By creating a hash function that can uniquely map each point map position to a float, we can store points in boxes that represent specific 3D box volumes. For each point mass, we loop through the other masses that are most likely to collide with it. Thus, we can take all of the other masses in our 3D box (represented by a specific hash bucket) and compare them easily to our current mass. A small issue I had was forgetting to check if the hash bucket is not initially null. If so, I needed to populate it with a vector, since the current point mass would be the first member of that bucket. </p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/early.png" width="400px" />
+        <figcaption align="middle">3 seconds in</figcaption>
+      </td>
+      <td>
+        <img src="images/mid.png" width="500px" />
+        <figcaption align="middle">about 9 seconds in</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/rest.png" width="500px" />
+        <figcaption align="middle">resting state</figcaption>
+      </td>
+      <td>
+        <img src="images/rest_top.png" width="200px" />
+        <figcaption align="middle">resting state top view</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
 
+<p>Below are images of the cloth with the density and ks values changed from the defaut values. When the ks is increased, there are larger folds with less wrinkles and the cloth appears more stiff. With a lower ks value, there are more wrinkles and the cloth is less stiff. Increasing the density created many more folds while decreasing density created wider folds with a more neat, less wrinkly resting state. </p>
 
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/d_2000.png" width="400px" />
+        <figcaption align="middle">ks 2000</figcaption>
+      </td>
+      <td>
+        <img src="images/d_50000.png" width="450px" />
+        <figcaption align="middle">ks 50000</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/5.png" width="400px" />
+        <figcaption align="middle">density 5</figcaption>
+      </td>
+      <td>
+        <img src="images/40.png" width="300px" />
+        <figcaption align="middle">density 40</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<h2 align="middle">Part V: Shaders</h2>
+<p>In this section, I implemented some GLSL shaders, which run parallel on GPU, speeding up render time from the raytracing done in previous projects. GLSL is a language that has two basic shader types that take inputs and give back a 4-dimensional vector: vertex shaders and fragment shaders. Vertex shaders apply transforms to verticies while fragment shaders compute output colors. </p>
+
+<p> I first implemented diffuse shading, which uses the formula for diffuse lighting: Ld = kd(I/r^2)max(0, dot(n, l)). This was a fragment shader, so I wrote the final color to out_color. </p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/diffuse.png" width="450px" />
+        <figcaption align="middle">diffuse shader</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<p>For Blinn-Phong shading, I built upon the diffuse shader to add ambient light and specular components and compute the output light. Below are the effects of isolating different components of the shader as well as the entire Blinn Phong model.</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/ambient.png" width="300px" />
+        <figcaption align="middle">ambient</figcaption>
+      </td>
+      <td>
+        <img src="images/spec.png" width="300px" />
+        <figcaption align="middle">specular</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/diff.png" width="300px" />
+        <figcaption align="middle">diffuse</figcaption>
+      </td>
+      <td>
+        <img src="images/phong.png" width="300px" />
+        <figcaption align="middle">Blinn Phong</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<p>For texture mapping with GLSL, I sampled from a texture that I chose using the built-in texture(tex, uv) function. </p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/my_tex.png" width="450px" />
+        <figcaption align="middle">my donut texture!</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<div align="middle">
+
+  <p>Next, I added bump mapping and displacement mapping. While bump mapping only utilizes the fragment file, the displacement map utilizes both since the actual vertices are changing position. For bump mapping, I computed local space normal by seeing how the height changes. From here we can compute small changes for u and v to get the bumped effect. For displacement mapping, I used the code from the bump fragment file, but changed the vertex file to update the positions of vertices based on the texture map. </p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/bump2.png" width="300px" />
+        <figcaption align="middle">bump with normal 100 height .02</figcaption>
+      </td>
+      <td>
+        <img src="images/displace.png" width="300px" />
+        <figcaption align="middle">displacement with normal 100 height .02</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<p> With a decreased coarseness, the texture appears more geometric around the eadges and we begin to see the subdivisions of the sphere(because there are less of them). With greater coarseness, there are more subdivisions and the texture looks much more smooth on the sphere. </p>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/16_bump.png" width="300px" />
+        <figcaption align="middle">bump with coarseness 16</figcaption>
+      </td>
+      <td>
+        <img src="images/16_disp.png" width="300px" />
+        <figcaption align="middle">displacement with coarseness 16</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/bump_128.png" width="300px" />
+        <figcaption align="middle">bump with coarseness 128</figcaption>
+      </td>
+      <td>
+        <img src="images/disp_128.png" width="300px" />
+        <figcaption align="middle">displacement with coarseness 128</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<p> Finally, I added a mirror shader that samples from the u_texture_cubemap and utilizes the built in texture function again. I computed the outgoing eye ray and reflected it across the surface normal to get the incoming direction</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/mirror.png" width="300px" />
+        <figcaption align="middle">mirror on cloth</figcaption>
+      </td>
+      <td>
+        <img src="images/ms.png" width="300px" />
+        <figcaption align="middle">mirror on sphere</figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+  
+
+</body>
+</html>
 

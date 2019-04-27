@@ -1,8 +1,8 @@
-# Install script for directory: /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn
+# Install script for directory: /Users/abbyrcohn/desktop/finalProject_waterCelShader
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/")
+  set(CMAKE_INSTALL_PREFIX "/Users/abbyrcohn/desktop/finalProject_waterCelShader/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,9 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/cmake_install.cmake")
-  include("/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CGL/cmake_install.cmake")
-  include("/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/src/cmake_install.cmake")
+  include("/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/cmake_install.cmake")
+  include("/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CGL/cmake_install.cmake")
+  include("/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/src/cmake_install.cmake")
 
 endif()
 
@@ -48,5 +48,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

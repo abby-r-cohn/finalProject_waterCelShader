@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.13.3/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn
+CMAKE_SOURCE_DIR = /Users/abbyrcohn/desktop/finalProject_waterCelShader
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build
+CMAKE_BINARY_DIR = /Users/abbyrcohn/desktop/finalProject_waterCelShader/build
 
 # Include any dependencies generated for this target.
 include ext/nanogui/CMakeFiles/nanogui.dir/depend.make
@@ -62,51 +62,51 @@ nanogui_OBJECTS =
 
 # External object files for target nanogui
 nanogui_EXTERNAL_OBJECTS = \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/darwin.mm.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
-"/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/darwin.mm.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/nanogui_resources.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glutil.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/common.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/widget.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/theme.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/layout.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/screen.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/label.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/window.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popup.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/checkbox.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/button.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/popupbutton.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/combobox.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/progressbar.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/slider.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/messagedialog.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/textbox.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imagepanel.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/imageview.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/vscrollpanel.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorwheel.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/colorpicker.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/graph.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/stackedwidget.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabheader.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/tabwidget.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/glcanvas.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui-obj.dir/src/serializer.cpp.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/context.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/init.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/input.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/monitor.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/vulkan.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/window.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_init.m.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_joystick.m.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_monitor.m.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_window.m.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/cocoa_time.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/posix_tls.c.o" \
+"/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o"
 
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/nanovg/src/nanovg.c.o
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui-obj.dir/ext/glad/src/glad.c.o
@@ -155,8 +155,8 @@ ext/nanogui/libnanogui.dylib: ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_obj
 ext/nanogui/libnanogui.dylib: ext/nanogui/ext_build/glfw/src/CMakeFiles/glfw_objects.dir/nsgl_context.m.o
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui.dir/build.make
 ext/nanogui/libnanogui.dylib: ext/nanogui/CMakeFiles/nanogui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library libnanogui.dylib"
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanogui.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/abbyrcohn/desktop/finalProject_waterCelShader/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX shared library libnanogui.dylib"
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nanogui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ext/nanogui/CMakeFiles/nanogui.dir/build: ext/nanogui/libnanogui.dylib
@@ -164,10 +164,10 @@ ext/nanogui/CMakeFiles/nanogui.dir/build: ext/nanogui/libnanogui.dylib
 .PHONY : ext/nanogui/CMakeFiles/nanogui.dir/build
 
 ext/nanogui/CMakeFiles/nanogui.dir/clean:
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui && $(CMAKE_COMMAND) -P CMakeFiles/nanogui.dir/cmake_clean.cmake
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui && $(CMAKE_COMMAND) -P CMakeFiles/nanogui.dir/cmake_clean.cmake
 .PHONY : ext/nanogui/CMakeFiles/nanogui.dir/clean
 
 ext/nanogui/CMakeFiles/nanogui.dir/depend:
-	cd /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/ext/nanogui /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui /Users/abbyrcohn/desktop/p4-clothsim-abby-r-cohn/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/abbyrcohn/desktop/finalProject_waterCelShader/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/abbyrcohn/desktop/finalProject_waterCelShader /Users/abbyrcohn/desktop/finalProject_waterCelShader/ext/nanogui /Users/abbyrcohn/desktop/finalProject_waterCelShader/build /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui /Users/abbyrcohn/desktop/finalProject_waterCelShader/build/ext/nanogui/CMakeFiles/nanogui.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ext/nanogui/CMakeFiles/nanogui.dir/depend
 
