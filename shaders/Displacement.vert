@@ -20,14 +20,11 @@ out vec2 v_uv;
 out vec4 v_tangent;
 
 float h(vec2 uv) {
-    // You may want to use this helper function...
     return texture(u_texture_4, uv).r;
 }
+
 void main() {
-  // YOUR CODE HERE
   v_position = v_position + v_normal * h(vec2(v_uv.x, v_uv.y)) * u_height_scaling;
-  // (Placeholder code. You will want to replace it.)
-//  v_position = u_model * in_position;
   v_normal = normalize(u_model * in_normal);
   v_uv = in_uv;
   v_tangent = normalize(u_model * in_tangent);

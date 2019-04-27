@@ -46,7 +46,6 @@ float r2;
 vec4 nd;
 
 float h(vec2 uv) {
-    // You may want to use this helper function...
     return texture(u_texture_4, uv).r;
 }
 
@@ -82,16 +81,10 @@ void main() {
     intensity = vec4(u_light_intensity, 0);
     norm_lpos = normalize(light_pos);
     norm_vnormal = normalize(v_normal);
-    //    norm_vlPos = normalize(v_position + light_pos);
     l = normalize(light_pos - v_position);
     h_val = normalize(v_position + l);
     
     out_color = ka * Ia + kd * (intensity/r2) * max(0, dot(norm_lpos, nd)) + (ks * (intensity/r2)) * pow(max(0, dot(nd,h_val)), 32);
-    
-    // (Placeholder code. You will want to replace it.)
-    //  out_color = (vec4(1, 1, 1, 0) + v_normal) / 2;
     out_color.a = 1;
-    // (Placeholder code. You will want to replace it.)
-    //  out_color = (vec4(1, 1, 1, 0) + v_normal) / 2;
 }
 
