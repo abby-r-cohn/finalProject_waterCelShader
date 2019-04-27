@@ -299,7 +299,7 @@ GLSLShader VS
 		vec3 vDisp1 = texture2D(gHeightMapSamp, t1).xyz;
 		vec3 vDisp2 = texture2D(gHeightMapSamp, t2).xyz;
 		vec3 vDisp3 = texture2D(gHeightMapSamp, t3).xyz;
-		float vDisp = 1.1 * WaveAmplitude * (vDisp1.x  -0.5 )
+		float vDisp = 1.1 * WaveAmplitude * (vDisp1.x -0.5)
 				   + 0.9 * WaveAmplitude * (vDisp2.x -0.5)
 				   + 0.8 * WaveAmplitude * (vDisp3.x -0.5);
 		//TODO: try to include gSeaNormalMap texture in gHeightMap texture			   
