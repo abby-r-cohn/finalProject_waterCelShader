@@ -1,0 +1,3 @@
+[submodule "p4-clothsim-ashnachoudhury"]
+	path = p4-clothsim-ashnachoudhury
+	url = https://github.com/cal-cs184-student/p4-clothsim-ashnachoudhury.git
