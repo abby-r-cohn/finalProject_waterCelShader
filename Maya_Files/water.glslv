@@ -28,6 +28,42 @@
     string UIName = "Height map scale factor";
     > = 1.0f;
 
+#if OGSFX
+
+/************* DATA STRUCTS **************/
+
+/* data from application vertex buffer */
+attribute appdata {
+vec3 Position    : POSITION;
+vec2 UV        : TEXCOORD0;
+vec3 Normal    : NORMAL;
+};
+
+/* data passed from vertex shader to pixel shader */
+attribute waterVertexOutput {
+vec3 WorldNormal    : TEXCOORD1;
+vec3 WorldEyeVec    : TEXCOORD2;
+vec4 ObjPos    : TEXCOORD3;
+vec4 DCol : COLOR0;
+float WaveAmplitude :   AMPLITUDE1;
+float vDisp :   DISP1;
+};
+
+#else
+
+in vec3 Position;
+in vec2 UV;
+in vec3 Normal;
+
+out float WaveAmplitude;
+out vec3 WorldNormal;
+out vec3 WorldEyeVec;
+out vec4 ObjPos;
+out vec4 DCol;
+out float vDisp;
+
+#endif
+
     void main()
     {
         vec4 INP = vec4(in_position, 1.0f);
@@ -43,7 +79,7 @@
         vec3 vDisp1 = texture2D(gHeightMapSamp, t1).xyz;
         vec3 vDisp2 = texture2D(gHeightMapSamp, t2).xyz;
         vec3 vDisp3 = texture2D(gHeightMapSamp, t3).xyz;
-        float vDisp = 1.1 * WaveAmplitude * (vDisp1.x  -0.5 )
+        vDisp = 1.1 * WaveAmplitude * (vDisp1.x  -0.5 )
         + 0.9 * WaveAmplitude * (vDisp2.x -0.5)
         + 0.8 * WaveAmplitude * (vDisp3.x -0.5);
         

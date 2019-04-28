@@ -464,7 +464,7 @@ GLSLShader PS_Wave
 			OUT.Color += specularColor + rimColor;
 
 			// Output specular and rim for opacity:
-			OUT.Specular = dot(clamp(specularColor, 0.0, 1.0), vec3(0.3f, 0.6f, 0.1f)) + rimColor.r;
+			OUT.Specular = dot(clamp(specularColor, 0.0, 1.0), vec3(0.3f, 0.6f, 0.1f))+ rimColor.r;
 
 
 		} // end if light enabled
@@ -507,7 +507,7 @@ GLSLShader PS_Wave
 		transparency = clamp(transparency, 0.0, 1.0);	// keep 0-1 range
 		
 		
-		color = vec4(lightTotal,transparency);  
+		color = vec4(DiffuseColor,transparency);
 
 #if GL_ES
         gl_FragColor = color;
