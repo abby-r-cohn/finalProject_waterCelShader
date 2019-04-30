@@ -29,7 +29,7 @@
     > = 1.0f;
 
 
-#if OGSFX
+
 
 /************* DATA STRUCTS **************/
 
@@ -84,12 +84,11 @@ out float vDisp;
         + 0.9 * WaveAmplitude * (vDisp2.x -0.5)
         + 0.8 * WaveAmplitude * (vDisp3.x -0.5);
         
-        if(in_position.y > 0)
-        {
+    if (in_position.y > 0) {
             INP.y += (vDisp);
             //consider adding x and z for presentation purposes
             //height displacement happens here
-        }
+    }
         
         vsOut.HPos = wp_matrix * INP;
         gl_Position = vsOut.HPos;
@@ -104,5 +103,6 @@ out float vDisp;
         vsOut.amCol = vec4(vNormalTotal, vDisp);
         vsOut.col_col0 = in_color0;
     }
-#endif
+
+
 

@@ -34,6 +34,7 @@ string UIWidget = "ColorPicker";
 int UIOrder = 504;
 > = {0.0f, 0.0f, 0.0f };
 
+#endif
 // Pixel shader for normal visualization.
 GLSLShader PS_Normal
 {
@@ -69,15 +70,16 @@ GLSLShader PS_Wave
         transparency = clamp(transparency, 0.0, 1.0);    // keep 0-1 range
 
 
-#if color == vec4(DiffuseColor,transparency)
+color = vec4(DiffuseColor,transparency)
 
-        #if GL_ES
-        gl_FragColor = color;
-        #else
-        colorOut = color;
-        #endif
+    #if GL_ES
+    gl_FragColor = color;
+    #else
+    colorOut = color;
+    #endif
     
     }
 }
-#endif
+
+
 
