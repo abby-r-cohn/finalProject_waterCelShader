@@ -20,11 +20,11 @@
 		color = vec4(DiffuseColor, transparency);
 		if (psIn.vDisp >= upper_cutoff)
 		{
-			color = vec4(SpecularColor, transparency);
+			color = vec4(DiffuseColor + SpecularColor, transparency);
 		}
 
 		else if (psIn.vDisp < lower_cutoff) {
-			color = vec4(DarkColor, transparency);
+			color = vec4(DiffuseColor - DarkColor, transparency);
 		}
 
 		#if GL_ES

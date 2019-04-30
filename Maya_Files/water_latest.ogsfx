@@ -20,58 +20,71 @@ uniform mat4 wproj_matrix : WorldViewProjection;
 uniform float Tmh : Time <string UIWidget = "None"; >;
 
 uniform float WaveAmplitude <
- string UIName = "Wave Amplitude"; 
+	string UIGroup = "Misc";
+	string UIName = "Wave Amplitude"; 
+	int UIOrder = 20;
  > = 3.0;
 
 uniform float TransparencyStd <
- string UIName = "Liquid Transparency"; 
+ 	string UIGroup = "Misc";
+	string UIName = "Liquid Transparency"; 
+	int UIOrder = 20;
  > = 0.0;
  
 uniform float texScale <
- string UIName = "Height map scale factor"; 
+	string UIGroup = "Misc";
+	string UIName = "Height map scale factor"; 
+	int UIOrder = 20;
  > = 1.0f;
  
 uniform float waterSpeed  <
- string UIName = "Water speed"; 
+	string UIGroup = "Misc";
+	string UIName = "Water speed"; 
+	int UIOrder = 20;
  > = 0.016f;
  
 uniform vec3 DiffuseColor : Diffuse
 <
-	string UIGroup = "Diffuse";
+	string UIGroup = "Colors";
 	string UIName = "Diffuse Color";
 	string UIWidget = "ColorPicker";
-	int UIOrder = 203;
+	int UIOrder = 10;
 > = {0.0f, 0.5f, 1.0f };
 
 uniform vec3 SpecularColor : Specular
 <
-	string UIGroup = "Specular";
+	string UIGroup = "Colors";
 	string UIName = "Specular Color";
 	string UIWidget = "ColorPicker";
-	int UIOrder = 204;
-> = {1.0f, 1.0f, 1.0f };
+	int UIOrder = 11;
+> = {0.0f, 0.10f, 0.10f };
 
 uniform vec3 DarkColor : Dark
 <
-	string UIGroup = "Dark";
+	string UIGroup = "Colors";
 	string UIName = "Dark Color";
 	string UIWidget = "ColorPicker";
-	int UIOrder = 205;
+	int UIOrder = 12;
 > = {0.0f, 0.25f, 0.25f };
 
 
 uniform texture2D gHeightMap  <
+	string UIGroup = "Misc";
     string ResourceName = "SeaHeightMap.jpg";
     string ResourceType = "2D";
     string UIName = "Sea Height Map";
 	int mipmaplevels = 0;
+	int UIOrder = 30;
+
 >;
 
 uniform texture2D gSeaNormalMap  <
+	string UIGroup = "Misc";
     string ResourceName = "SeaNormalMap.jpg";
     string ResourceType = "2D";
     string UIName = "Sea Normal Map";
-	int mipmaplevels = 0;
+	int mipmaplevels = 0;	
+	int UIOrder = 31;
 >;
 
 
@@ -138,6 +151,52 @@ GLSLShader FS
 #include "water_latest.glslf"
 }
 
+// Pixel shader for norms
+GLSLShader PS_Normal
+{
+    void main()
+    {
+        vec4 color;
+		color = vec4(psIn.amCol.xyz * 0.5 + vec3(0.5,0.5,0.5) ,1.0);
+
+#if GL_ES
+        gl_FragColor = color;
+#else
+        colorOut = color;
+#endif
+    }
+}
+
+
+
+//*****************************
+// XTRA FILES for normal selection
+//*****************************
+#include "PS_HWSelection.ogsfh"
+
+#define PS_SOLIDCOLOR_FALLBACKCOLOR \
+		vec4(psIn.col_col0, 1)
+#include "PS_SolidColor.ogsfh"
+
+#define GS_FATLINE_EMIT_USERDATA(index) \
+		gsOut.HPos = gsIn[index].HPos; \
+		gsOut.worldNormal = gsIn[index].worldNormal; \
+		gsOut.worldTangent = gsIn[index].worldTangent; \
+		gsOut.worldPosition = gsIn[index].worldPosition; \
+		gsOut.amCol = gsIn[index].amCol; \
+		gsOut.col_col0 = gsIn[index].col_col0;
+#include "GS_FatLine.ogsfh"
+
+#define GS_FATPOINT_EMIT_USERDATA(index) \
+		gsOut.HPos = gsIn[index].HPos; \
+		gsOut.worldNormal = gsIn[index].worldNormal; \
+		gsOut.worldTangent = gsIn[index].worldTangent; \
+		gsOut.worldPosition = gsIn[index].worldPosition; \
+		gsOut.amCol = gsIn[index].amCol; \
+		gsOut.col_col0 = gsIn[index].col_col0;
+#include "GS_FatPoint.ogsfh"
+
+
 //*****************************
 // Techniques.
 //*****************************
@@ -160,4 +219,125 @@ string handlesConsolidatedGeometry = "false";
         VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
         PixelShader (in vs_to_ps psIn, out ps_output) = FS;
     }
+}
+
+
+
+//*****************************//*****************************
+
+technique NormalView
+<
+//We do not need transparency for this technique
+string Transparency = "Opaque";
+
+// Enlarge BBox to follow displacement -- prevents the object to be discarded when moved at the edge of the viewport
+float extraScale = 5.0;
+
+// Disable consolidation -- the pixel shading algorithm uses the world matrix
+// which would be modified if consolidation was activated
+string handlesConsolidatedGeometry = "false";
+>
+{
+    pass pNormal
+    {
+        VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+        PixelShader (in vs_to_ps psIn, out ps_output) = PS_Normal;
+    }
+}
+//*****************************//*****************************
+technique NormalView_Selection
+<
+//We do not need transparency for this technique
+string Transparency = "Opaque";
+
+// Use the effect to also render non material items (ie. wireframe) so they will follow the displacement
+string overridesNonMaterialItems = "true";
+
+// Enlarge BBox to follow displacement -- prevents the object to be discarded when moved at the edge of the viewport or during selection
+float extraScale = 5.0;
+
+// Disable consolidation -- the pixel shading algorithm uses the world matrix
+// which would be modified if consolidation was activated
+string handlesConsolidatedGeometry = "false";
+>
+{
+    pass pNormal
+    {
+        VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+        PixelShader (in vs_to_ps psIn, out ps_output) = PS_Normal;
+    }
+
+	//////////////////////////////////////
+	// Passes to draw components (wireframe, vertices ...)
+
+	pass pNonMaterialItems
+	<
+		// This pass will be used to render overrided non material items
+		string drawContext = "nonMaterialItemsPass";
+	>
+	{
+		VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+		PixelShader (in vs_to_ps psIn, out ps_output) = PS_SolidColor;
+	}
+
+	pass pNonMaterialItemsFatLine
+	<
+		// This pass will be used to render overrided non material items as fat line
+		string drawContext = "nonMaterialItemsPass";
+		string primitiveFilter = "fatLine";
+	>
+	{
+		VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+		GeometryShader (in vs_to_ps gsIn, out vs_to_ps gsOut) = GS_FatLine;
+		PixelShader (in vs_to_ps psIn, out ps_output) = PS_SolidColor;
+	}
+
+	pass pNonMaterialItemsFatPoint
+	<
+		// This pass will be used to render overrided non material items as fat point
+		string drawContext = "nonMaterialItemsPass";
+		string primitiveFilter = "fatPoint";
+	>
+	{
+		VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+		GeometryShader (in vs_to_ps gsIn, out vs_to_ps gsOut) = GS_FatPoint;
+		PixelShader (in vs_to_ps psIn, out ps_output) = PS_SolidColor;
+	}
+
+	//////////////////////////////////////
+	// Passes to perform the selection on components
+
+	pass pNonMaterialItemsSelection
+	<
+		// This pass will be used for selection of overrided non material items
+		string drawContext = "selectionPass";
+	>
+	{
+		VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+		PixelShader (in vs_to_ps psIn, out ps_output) = PS_HWSelection;
+	}
+
+	pass pNonMaterialItemsSelectionFatLine
+	<
+		// This pass will be used for selection of overrided non material items as fat line
+		string drawContext = "selectionPass";
+		string primitiveFilter = "fatLine";
+	>
+	{
+		VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+		GeometryShader (in vs_to_ps gsIn, out vs_to_ps gsOut) = GS_FatLine;
+		PixelShader (in vs_to_ps psIn, out ps_output) = PS_HWSelection;
+	}
+
+	pass pNonMaterialItemsSelectionFatPoint
+	<
+		// This pass will be used for selection of overrided non material items as fat point
+		string drawContext = "selectionPass";
+		string primitiveFilter = "fatPoint";
+	>
+	{
+		VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+		GeometryShader (in vs_to_ps gsIn, out vs_to_ps gsOut) = GS_FatPoint;
+		PixelShader (in vs_to_ps psIn, out ps_output) = PS_HWSelection;
+	}
 }
