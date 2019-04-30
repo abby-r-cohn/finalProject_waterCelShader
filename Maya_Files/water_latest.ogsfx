@@ -42,13 +42,22 @@ uniform vec3 DiffuseColor : Diffuse
 	string UIWidget = "ColorPicker";
 	int UIOrder = 203;
 > = {0.0f, 0.5f, 1.0f };
+
 uniform vec3 SpecularColor : Specular
 <
 	string UIGroup = "Specular";
 	string UIName = "Specular Color";
 	string UIWidget = "ColorPicker";
-	int UIOrder = 203;
+	int UIOrder = 204;
 > = {1.0f, 1.0f, 1.0f };
+
+uniform vec3 DarkColor : Dark
+<
+	string UIGroup = "Dark";
+	string UIName = "Dark Color";
+	string UIWidget = "ColorPicker";
+	int UIOrder = 205;
+> = {0.0f, 0.25f, 0.25f };
 
 
 uniform texture2D gHeightMap  <
@@ -86,7 +95,8 @@ attribute vs_input
     vec3 in_position : POSITION;
 	vec3 in_tangent : TANGENT; 
 	vec3 in_color0 : COLOR0;
-
+	
+	float vDisp : VDISPLACE;
 }
 
 // Vertex shader output structure.
@@ -99,11 +109,12 @@ attribute vs_to_ps
 	vec4 worldTangent 	: TANGENT; 
 	
 	vec3 worldPosition : TEXCOORD3;
-	vec4 amCol : COLOR; // given, don't worry abt it for now
-	vec3 col_col0 : COLOR; // given, don't worry abt it for now
+	vec4 amCol : COLOR;
+	vec3 col_col0 : COLOR;
 
-	//float vDisp; // necessary for height shenanigans
-
+	float vDisp : VDISPLACE;
+	//vec4 inp_output : INPOS;
+	//float waveamp : WaveAmplitude;
 }
 
 attribute ps_output 
