@@ -28,6 +28,7 @@
     string UIName = "Height map scale factor";
     > = 1.0f;
 
+
 #if OGSFX
 
 /************* DATA STRUCTS **************/
@@ -103,5 +104,5 @@ out float vDisp;
         vsOut.amCol = vec4(vNormalTotal, vDisp);
         vsOut.col_col0 = in_color0;
     }
+#endif
 
-	#endif
