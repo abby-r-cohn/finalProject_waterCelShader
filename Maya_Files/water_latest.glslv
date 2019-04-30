@@ -23,18 +23,66 @@ float WaveAmplitude :   AMPLITUDE1;
 float vDisp :   DISP1;
 };
 
+
+attribute vs_input {
+vec3 DiffuseColor;
+vec3 SpecularColor;
+vec3 DarkColor;
+mat4 wp_matrix;
+texture2D gHeightMap;
+sampler2D gHeightMapSamp;
+vec2 in_texcoord;
+float WaveAmplitude;
+float Tmh;
+float texScale;
+float waterSpeed;
+mat4 w_matrix;
+float TransparencyStd;
+};
+
+attribute vs_to_ps {
+vec2 texcoord;
+vec3 diffuse;
+vec3 specular;
+mat4 wp;
+float t;
+float amp;
+vec3 dark;
+float vDisp;
+};
+
 #else
 
-in vec3 Position;
-in vec2 UV;
-in vec3 Normal;
+//in vec3 Position;
+//in vec2 UV;
+//in vec3 Normal;
 
-out float WaveAmplitude;
-out vec3 WorldNormal;
-out vec3 WorldEyeVec;
-out vec4 ObjPos;
-out vec4 DCol;
+in vec3 DiffuseColor;
+in vec3 SpecularColor;
+in vec3 DarkColor;
+in mat4 wp_matrix;
+in texture2D gHeightMap;
+in sampler2D gHeightMapSamp;
+in vec2 in_texcoord;
+in float WaveAmplitude;
+in float Tmh;
+in float texScale;
+in float waterSpeed;
+in mat4 w_matrix;
+in float TransparencyStd;
+
+out float amp;
+//out vec3 WorldNormal;
+//out vec3 WorldEyeVec;
+//out vec4 ObjPos;
+//out vec4 DCol;
 out float vDisp;
+out vec3 diffuse;
+out mat4 wp;
+out vec3 specular;
+out vec3 dark;
+out vec2 texcoord;
+out float t;
 
 #endif
 

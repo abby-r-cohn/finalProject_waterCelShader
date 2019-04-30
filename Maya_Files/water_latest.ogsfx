@@ -55,7 +55,7 @@ uniform float TransparencyStd <
 string UIName = "Liquid Transparency";
 > = 0.0;
 
-uniform vec3 Diff_Color : Diffuse
+uniform vec3 DiffuseColor : Diffuse
 <
 string UIGroup = "Diffuse";
 string UIName = "Diffuse Color";
@@ -63,7 +63,7 @@ string UIWidget = "ColorPicker";
 int UIOrder = 203;
 > = {0.0f, 0.5f, 1.0f };
 
-uniform vec3 Spec_Color : Specular
+uniform vec3 SpecularColor : Specular
 <
 string UIGroup = "Specular";
 string UIName = "Specular Color";
@@ -71,7 +71,7 @@ string UIWidget = "ColorPicker";
 int UIOrder = 404;
 > = {1.0f, 1.0f, 1.0f };
 
-uniform vec3 Dark_Color : Dark
+uniform vec3 DarkColor : Dark
 <
 string UIGroup = "Dark";
 string UIName = "Dark Color";
@@ -79,28 +79,28 @@ string UIWidget = "ColorPicker";
 int UIOrder = 504;
 > = {0.0f, 0.0f, 0.0f };
 
-uniform mat4 wp_mat : WorldViewProjection;
+uniform mat4 wp_matrix : WorldViewProjection;
 uniform mat4 w_matrix : World;
 uniform float waterSpeed  <
 string UIName = "Water Speed";
 > = 0.016f;
 
-uniform texture2D gHMap  <
+uniform texture2D gHeightMap  <
 string ResourceName = "textures/SeaHeightMap.jpg";
 string ResourceType = "2D";
 string UIName = "Sea Height Map";
 int mipmaplevels = 0;
 >;
-uniform sampler2D gHMapSamp = sampler_state
+uniform sampler2D gHeightMapSamp = sampler_state
 {
-	texture = <gHMap>;
+	texture = <gHeightMap>;
 };
-uniform float Wave_Amp <
+uniform float WaveAmplitude <
 string UIName = "Wave Amplitude";
 > = 3.0;
-uniform float time : Time <string UIWidget = "None"; >;
+uniform float Tmh : Time <string UIWidget = "None"; >;
 
-uniform float tx_Scale <
+uniform float texScale <
 string UIName = "Height map scale factor";
 > = 1.0f;
 
@@ -111,16 +111,19 @@ string UIName = "Height map scale factor";
 //************************************
 
 attribute vs_input {
-    vec3 DiffuseColor : Diff_Color;
-    vec3 SpecularColor : Spec_Color;
-    vec3 DarkColor : Dark_Color;
-    mat4 wp_matrix : wp_mat;
-    texture2D gHeightMap : gHMap;
-    sampler2D gHeightMapSamp : gHMapSamp;
-    vec2 in_texcoord : TEXCOORD0;
-    float WaveAmplitude : Wave_Amp;
-    float Tmh : time;
-    float texScale : tx_Scale;
+    vec3 DiffuseColor;
+    vec3 SpecularColor;
+    vec3 DarkColor;
+    mat4 wp_matrix;
+    texture2D gHeightMap;
+    sampler2D gHeightMapSamp;
+    vec2 in_texcoord;
+    float WaveAmplitude;
+    float Tmh;
+    float texScale;
+    float waterSpeed;
+    mat4 w_matrix;
+    float TransparencyStd;
 };
 
 attribute vs_to_ps {
@@ -129,10 +132,13 @@ attribute vs_to_ps {
 	vec3 specular;
 	mat4 wp;
 	float t;
+    float amp;
+    vec3 dark;
+    float vDisp;
 };
 
 attribute ps_output {
-    vec4 out_color : COLOR0;
+    vec4 color : COLOR0;
 };
 
 //*****************************
