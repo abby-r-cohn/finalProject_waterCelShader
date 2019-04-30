@@ -93,7 +93,7 @@ int mipmaplevels = 0;
 >;
 uniform sampler2D gHMapSamp = sampler_state
 {
-texture = <gHMap>;
+	texture = <gHMap>;
 };
 uniform float Wave_Amp <
 string UIName = "Wave Amplitude";
@@ -121,6 +121,18 @@ attribute vs_input {
     float WaveAmplitude : Wave_Amp;
     float Tmh : time;
     float texScale : tx_Scale;
+};
+
+attribute vs_to_ps {
+    vec2 texcoord;
+	vec3 diffuse;
+	vec3 specular;
+	mat4 wp;
+	float t;
+};
+
+attribute ps_output {
+    vec4 out_color : COLOR0;
 };
 
 //*****************************
