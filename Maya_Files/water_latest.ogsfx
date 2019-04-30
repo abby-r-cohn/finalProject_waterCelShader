@@ -1,175 +1,152 @@
-//**********
-//	This skeleton OGSFX file illustrates one potential way of
-//	dealing with GLSL files that are to be shared between a 
-//	pure OpenGL application and the glslShader:
-//
+#define PI 3.14
 
-// Tell included shaders to use OGSFX semantics and streams:
-#define OGSFX 1
-
-//**********
-//	Uniform parameter handling:
-//
-//	Loads the uniforms from all shader stage files
-//
-
-#define HIDE_OGSFX_UNIFORMS 0
-#define HIDE_OGSFX_STREAMS 1
-#define HIDE_OGSFX_CODE 1
-
-#include "water.glslv"
-#include "water.glslf"
-
-
-//**********
-//	Input stream handling:
-//
-//	Loads the attribute streams from all shader stage files
-//
-
-#define HIDE_OGSFX_UNIFORMS 1
-#define HIDE_OGSFX_STREAMS 0
-#define HIDE_OGSFX_CODE 1
-
-#include "water.glslv"
-#include "water.glslf"
-
-//**********
-//	Code handling:
-//
-//	We need to load the vertex stage and fragment stage in two
-//	different GLSLShader blocks in order to specify them in the
-//	technique definition below:
-//
-
-#define HIDE_OGSFX_UNIFORMS 1
-#define HIDE_OGSFX_STREAMS 1
-#define HIDE_OGSFX_CODE 0
-
-
-//*******************************
-//PARAMETERES IN MAYA
-//*******************************
-
-uniform float TransparencyStd <
-string UIName = "Liquid Transparency";
-> = 0.0;
-
-uniform vec3 DiffuseColor : Diffuse
-<
-string UIGroup = "Diffuse";
-string UIName = "Diffuse Color";
-string UIWidget = "ColorPicker";
-int UIOrder = 203;
-> = {0.0f, 0.5f, 1.0f };
-
-uniform vec3 SpecularColor : Specular
-<
-string UIGroup = "Specular";
-string UIName = "Specular Color";
-string UIWidget = "ColorPicker";
-int UIOrder = 404;
-> = {1.0f, 1.0f, 1.0f };
-
-uniform vec3 DarkColor : Dark
-<
-string UIGroup = "Dark";
-string UIName = "Dark Color";
-string UIWidget = "ColorPicker";
-int UIOrder = 504;
-> = {0.0f, 0.0f, 0.0f };
-
-uniform mat4 wp_matrix : WorldViewProjection;
+// World transformation.
 uniform mat4 w_matrix : World;
-uniform float waterSpeed  <
-string UIName = "Water Speed";
-> = 0.016f;
 
-uniform texture2D gHeightMap  <
-string ResourceName = "textures/SeaHeightMap.jpg";
-string ResourceType = "2D";
-string UIName = "Sea Height Map";
-int mipmaplevels = 0;
->;
-uniform sampler2D gHeightMapSamp = sampler_state
-{
-	texture = <gHeightMap>;
-};
-uniform float WaveAmplitude <
-string UIName = "Wave Amplitude";
-> = 3.0;
+uniform mat4 viewInv : ViewInverse; 
+
+// World-view-projection transformation.
+uniform mat4 wproj_matrix : WorldViewProjection;
+
+// World-view transformation.
+//uniform mat4 wview_matrix : WorldView;
+
+// The offset of the current tile, relative to the full image.  This is (0.0, 0.0) when not tiling.
+//uniform vec2 gTileOffset : TileOffset;
+
+// The scale of the current tile, relative to the full image.  This is (1.0, 1.0) when not tiling.
+//uniform vec2 gTileScale : TileScale;
+
 uniform float Tmh : Time <string UIWidget = "None"; >;
 
+uniform float WaveAmplitude <
+ string UIName = "Wave Amplitude"; 
+ > = 3.0;
+
+uniform float TransparencyStd <
+ string UIName = "Liquid Transparency"; 
+ > = 0.0;
+ 
 uniform float texScale <
-string UIName = "Height map scale factor";
-> = 1.0f;
+ string UIName = "Height map scale factor"; 
+ > = 1.0f;
+ 
+uniform float waterSpeed  <
+ string UIName = "Water speed"; 
+ > = 0.016f;
+ 
+uniform vec3 DiffuseColor : Diffuse
+<
+	string UIGroup = "Diffuse";
+	string UIName = "Diffuse Color";
+	string UIWidget = "ColorPicker";
+	int UIOrder = 203;
+> = {0.0f, 0.5f, 1.0f };
+uniform vec3 SpecularColor : Specular
+<
+	string UIGroup = "Specular";
+	string UIName = "Specular Color";
+	string UIWidget = "ColorPicker";
+	int UIOrder = 203;
+> = {1.0f, 1.0f, 1.0f };
 
 
+uniform texture2D gHeightMap  <
+    string ResourceName = "SeaHeightMap.jpg";
+    string ResourceType = "2D";
+    string UIName = "Sea Height Map";
+	int mipmaplevels = 0;
+>;
 
-//************************************
-//INPUTS FOR FRAG AND VERT
-//************************************
+uniform texture2D gSeaNormalMap  <
+    string ResourceName = "SeaNormalMap.jpg";
+    string ResourceType = "2D";
+    string UIName = "Sea Normal Map";
+	int mipmaplevels = 0;
+>;
 
-attribute vs_input {
-    vec3 DiffuseColor;
-    vec3 SpecularColor;
-    vec3 DarkColor;
-    mat4 wp_matrix;
-    texture2D gHeightMap;
-    sampler2D gHeightMapSamp;
-    vec2 in_texcoord;
-    float WaveAmplitude;
-    float Tmh;
-    float texScale;
-    float waterSpeed;
-    mat4 w_matrix;
-    float TransparencyStd;
+
+uniform sampler2D gHeightMapSamp = sampler_state
+{
+    texture = <gHeightMap>;
 };
 
-attribute vs_to_ps {
-    vec2 texcoord;
-	vec3 diffuse;
-	vec3 specular;
-	mat4 wp;
-	float t;
-    float amp;
-    vec3 dark;
-    float vDisp;
+uniform sampler2D gSeaNormalMapSamp = sampler_state
+{
+    texture = <gSeaNormalMap>;
 };
 
-attribute ps_output {
-    vec4 color : COLOR0;
-};
 
 //*****************************
+// Vertex shader input structure.
+//*****************************
+
+attribute vs_input
+{
+    vec3 in_position : POSITION;
+	vec3 in_tangent : TANGENT; 
+	vec3 in_color0 : COLOR0;
+
+}
+
+// Vertex shader output structure.
+attribute vs_to_ps
+{
+    // The vertex position in clip space.
+    vec4 HPos : SV_Position;
+		
+	vec3 worldNormal   	: NORMAL;
+	vec4 worldTangent 	: TANGENT; 
+	
+	vec3 worldPosition : TEXCOORD3;
+	vec4 amCol : COLOR; // given, don't worry abt it for now
+	vec3 col_col0 : COLOR; // given, don't worry abt it for now
+
+	//float vDisp; // necessary for height shenanigans
+
+}
+
+attribute ps_output 
+{
+    vec4 colorOut:COLOR0;
+}
+
+//*****************************
+// Including shaders
+//*****************************
+
 // Vertex shader.
 GLSLShader VS
 {
-#include "water.glslv"
+#include "water_latest.glslv"
 }
 
 // Fragment shader.
 GLSLShader FS
 {
-#include "water.glslf"
+#include "water_latest.glslf"
 }
 
-//**********
-//	Effect handling:
-//
-//	Here we define a generic technique with very simple passes.
-//	The name of the io streams between shader stages must match the
-//	ones found in the shader stage files. This could be eliminated by
-//	another set of #define directives to unify the io stream names in
-//	all shader stage files.
-//
-
+//*****************************
 // Techniques.
+//*****************************
+
 technique Main
+<
+//tell Maya to support transparency for this technique
+string Transparency = "Transparent";
+
+// Enlarge BBox to follow displacement -- prevents the object to be discarded when moved at the edge of the viewport
+float extraScale = 5.0;
+
+// Disable consolidation -- the pixel shading algorithm uses the world matrix
+// which would be modified if consolidation was activated
+string handlesConsolidatedGeometry = "false";
+>
 {
     pass p0
     {
-        VertexShader (in vs_input, out vs_to_ps) = VS;
-        PixelShader (in vs_to_ps, out ps_output) = FS;
+        VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+        PixelShader (in vs_to_ps psIn, out ps_output) = FS;
     }
 }

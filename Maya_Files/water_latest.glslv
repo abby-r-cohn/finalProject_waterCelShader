@@ -1,6 +1,3 @@
-#version 330
-
-/************* DATA STRUCTS **************/
 
     void main()
     {
@@ -17,7 +14,7 @@
         vec3 vDisp1 = texture2D(gHeightMapSamp, t1).xyz;
         vec3 vDisp2 = texture2D(gHeightMapSamp, t2).xyz;
         vec3 vDisp3 = texture2D(gHeightMapSamp, t3).xyz;
-        vDisp = 1.1 * WaveAmplitude * (vDisp1.x  -0.5 )
+        float vDisp = 1.1 * WaveAmplitude * (vDisp1.x  -0.5 )
         + 0.9 * WaveAmplitude * (vDisp2.x -0.5)
         + 0.8 * WaveAmplitude * (vDisp3.x -0.5);
         
@@ -27,7 +24,7 @@
             //height displacement happens here
     }
         
-        vsOut.HPos = wp_matrix * INP;
+        vsOut.HPos = wproj_matrix * INP;
         gl_Position = vsOut.HPos;
         
         vec4 worldPos = w_matrix * INP;
@@ -37,7 +34,7 @@
         
 //        vsOut.worldNormal = (gWXf * vec4(vNormalTotal,0.0)).xyz;
         vsOut.worldTangent = normalize( w_matrix * vec4(in_tangent,0.0) );
-        vsOut.amCol = vec4(vNormalTotal, vDisp);
+//        vsOut.amCol = vec4(vNormalTotal, vDisp);
         vsOut.col_col0 = in_color0;
     }
 
