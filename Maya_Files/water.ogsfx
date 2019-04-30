@@ -46,6 +46,84 @@
 #define HIDE_OGSFX_STREAMS 1
 #define HIDE_OGSFX_CODE 0
 
+
+//*******************************
+//PARAMETERES IN MAYA
+//*******************************
+
+uniform float TransparencyStd <
+string UIName = "Liquid Transparency";
+> = 0.0;
+
+uniform vec3 Diff_Color : Diffuse
+<
+string UIGroup = "Diffuse";
+string UIName = "Diffuse Color";
+string UIWidget = "ColorPicker";
+int UIOrder = 203;
+> = {0.0f, 0.5f, 1.0f };
+
+uniform vec3 Spec_Color : Specular
+<
+string UIGroup = "Specular";
+string UIName = "Specular Color";
+string UIWidget = "ColorPicker";
+int UIOrder = 404;
+> = {1.0f, 1.0f, 1.0f };
+
+uniform vec3 Dark_Color : Dark
+<
+string UIGroup = "Dark";
+string UIName = "Dark Color";
+string UIWidget = "ColorPicker";
+int UIOrder = 504;
+> = {0.0f, 0.0f, 0.0f };
+
+uniform mat4 wp_mat : WorldViewProjection;
+uniform mat4 w_matrix : World;
+uniform float waterSpeed  <
+string UIName = "Water Speed";
+> = 0.016f;
+
+uniform texture2D gHMap  <
+string ResourceName = "textures/SeaHeightMap.jpg";
+string ResourceType = "2D";
+string UIName = "Sea Height Map";
+int mipmaplevels = 0;
+>;
+uniform sampler2D gHMapSamp = sampler_state
+{
+texture = <gHMap>;
+};
+uniform float Wave_Amp <
+string UIName = "Wave Amplitude";
+> = 3.0;
+uniform float time : Time <string UIWidget = "None"; >;
+
+uniform float tx_Scale <
+string UIName = "Height map scale factor";
+> = 1.0f;
+
+
+
+//************************************
+//INPUTS FOR FRAG AND VERT
+//************************************
+
+attribute vs_input {
+    vec3 DiffuseColor : Diff_Color;
+    vec3 SpecularColor : Spec_Color;
+    vec3 DarkColor : Dark_Color;
+    mat4 wp_matrix : wp_mat;
+    texture2D gHeightMap : gHMap;
+    sampler2D gHeightMapSamp : gHMapSamp;
+    vec2 in_texcoord : TEXCOORD0;
+    float WaveAmplitude : Wave_Amp;
+    float Tmh : time;
+    float texScale : tx_Scale;
+};
+
+//*****************************
 // Vertex shader.
 GLSLShader VS
 {
@@ -73,7 +151,7 @@ technique Main
 {
     pass p0
     {
-        VertexShader (in appdata, out brixVertexOutput) = VS;
-        PixelShader (in brixVertexOutput, out pixelOut) = FS;
+        VertexShader (in vs_input, out vs_to_ps) = VS;
+        PixelShader (in vs_to_ps, out ps_output) = FS;
     }
 }

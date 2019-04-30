@@ -4,33 +4,6 @@
 
 #if OGSFX
 
-    uniform mat4 wp_matrix : WorldViewProjection;
-    uniform mat4 w_matrix : World;
-    uniform float waterSpeed  <
-    string UIName = "Water Speed";
-    > = 0.016f;
-    uniform texture2D gHeightMap  <
-    string ResourceName = "textures/SeaHeightMap.jpg";
-    string ResourceType = "2D";
-    string UIName = "Sea Height Map";
-    int mipmaplevels = 0;
-    >;
-    uniform sampler2D gHeightMapSamp = sampler_state
-    {
-        texture = <gHeightMap>;
-    };
-    uniform float WaveAmplitude <
-    string UIName = "Wave Amplitude";
-    > = 3.0;
-    uniform float Tmh : Time <string UIWidget = "None"; >;
-
-    uniform float texScale <
-    string UIName = "Height map scale factor";
-    > = 1.0f;
-
-
-
-
 /************* DATA STRUCTS **************/
 
 /* data from application vertex buffer */

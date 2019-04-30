@@ -6,34 +6,6 @@
 
 uniform mat4 viewInv : ViewInverse;
 
-uniform float TransparencyStd <
-string UIName = "Liquid Transparency";
-> = 0.0;
-
-uniform vec3 DiffuseColor : Diffuse
-<
-string UIGroup = "Diffuse";
-string UIName = "Diffuse Color";
-string UIWidget = "ColorPicker";
-int UIOrder = 203;
-> = {0.0f, 0.5f, 1.0f };
-
-uniform vec3 SpecularColor : Specular
-<
-string UIGroup = "Specular";
-string UIName = "Specular Color";
-string UIWidget = "ColorPicker";
-int UIOrder = 404;
-> = {1.0f, 1.0f, 1.0f };
-
-uniform vec3 DarkColor : Dark
-<
-string UIGroup = "Dark";
-string UIName = "Dark Color";
-string UIWidget = "ColorPicker";
-int UIOrder = 504;
-> = {0.0f, 0.0f, 0.0f };
-
 #endif
 // Pixel shader for normal visualization.
 GLSLShader PS_Normal
