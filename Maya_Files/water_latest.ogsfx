@@ -118,8 +118,8 @@ attribute vs_to_ps
     // The vertex position in clip space.
     vec4 HPos : SV_Position;
 		
-	vec3 worldNormal   	: NORMAL;
-	vec4 worldTangent 	: TANGENT; 
+	vec3 worldNormal  : NORMAL;
+	vec4 worldTangent : TANGENT;
 	
 	vec3 worldPosition : TEXCOORD3;
 	vec4 amCol : COLOR;
