@@ -14,16 +14,16 @@
 		transparency = clamp(transparency, 0.0, 1.0);	// keep 0-1 range
 		
 
-		float upper_cutoff = (WaveAmplitude * .03);
-		float lower_cutoff = -1 * (WaveAmplitude * .03);
+		float upper_cutoff = (WaveAmplitude * CutoffSize);
+		float lower_cutoff = -2 * (WaveAmplitude * CutoffSize);
 
 		color = vec4(DiffuseColor, transparency);
-		if (psIn.vDisp >= upper_cutoff)
+		if (psIn.vDisp > upper_cutoff)
 		{
 			color = vec4(DiffuseColor + SpecularColor, transparency);
 		}
 
-		else if (psIn.vDisp < lower_cutoff) {
+		else if (psIn.vDisp <= lower_cutoff) {
 			color = vec4(DiffuseColor - DarkColor, transparency);
 		}
 

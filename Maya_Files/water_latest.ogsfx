@@ -19,6 +19,12 @@ uniform mat4 wproj_matrix : WorldViewProjection;
 
 uniform float Tmh : Time <string UIWidget = "None"; >;
 
+uniform float CutoffSize : Cutoff<
+    string UIGroup = "Misc";
+    string UIName = "Cutoff Size";
+    int UIOrder = 20;
+ > = 0.10f;
+
 uniform float WaveAmplitude <
 	string UIGroup = "Misc";
 	string UIName = "Wave Amplitude"; 
@@ -65,7 +71,7 @@ uniform vec3 DarkColor : Dark
 	string UIName = "Dark Color";
 	string UIWidget = "ColorPicker";
 	int UIOrder = 12;
-> = {0.0f, 0.25f, 0.25f };
+> = {0.0f, 0.25f, 0.25f};
 
 
 uniform texture2D gHeightMap  <
