@@ -30,7 +30,6 @@
         vec4 worldPos = w_matrix * INP;
         vsOut.worldPosition.xyz = worldPos.xyz;
         
-        //Out.texCoord0 = In.texCoord0;
         
 //        vsOut.worldNormal = (gWXf * vec4(vNormalTotal,0.0)).xyz;
         vsOut.worldNormal;
