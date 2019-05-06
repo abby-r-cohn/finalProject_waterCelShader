@@ -126,7 +126,7 @@ uniform texture2D rippleMap  <
 	int UIOrder = 30;
 
 >;
-uniform sampler2D dynamicRippleTexture = sampler_state
+uniform sampler2D _DynamicRippleTexture = sampler_state
 {
 	texture = <rippleMap>;
 };
@@ -185,6 +185,7 @@ attribute vs_to_rs
 	vec3 col_col0 : COLOR;
 
 	float vDisp : VDISPLACE;
+    //sampler2D _DynamicRippleTexture :  dynamicRippleTexture;
 	//vec4 inp_output : INPOS;
 	//float waveamp : WaveAmplitude;
 }
@@ -280,12 +281,12 @@ float extraScale = 5.0;
 string handlesConsolidatedGeometry = "false";
 >
 {
-    pass p0
-    {
-        VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
-        PixelShader (in vs_to_ps psIn, out ps_output) = FS;
-    }
-	pass ripples
+  // pass p0
+    //{
+      //  VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+       // PixelShader (in vs_to_ps psIn, out ps_output) = FS;
+    //}
+	pass p1
     {
         VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
         PixelShader (in vs_to_rs psIn, out rs_output) = RS;

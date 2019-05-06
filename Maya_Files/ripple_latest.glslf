@@ -10,9 +10,9 @@
 		float ripple_x = clamp(rippleCoords.x * 0.5 + 0.5, 0.0, 1.0);
 		float ripple_y = clamp(rippleCoords.y * 0.5 + 0.5, 0.0, 1.0);
 
-		vec4 ripples = texture2D(_DynamicRippleTexture, vec2(ripple_x, ripple_y));
+		vec4 ripples = texture(_DynamicRippleTexture, vec2(ripple_x, ripple_y));
 
-		ripple.x = pow(ripples.x, 0.45);
+		ripples.x = pow(ripples.x, 0.45);
 		ripples.y = pow(ripples.y, 0.45);
 		ripples.z = pow(ripples.z, 0.45);
 
@@ -41,10 +41,11 @@
 
    void main()
     {
-		vec4 c = texture2D(_MainTex, IN.uv_MainTex  + frac(Tmh * waterSpeed));
-		vec4 c2 = texture2D(_MainTex, IN.uv_MainTex * 1.3 + frac(Tmh * waterSpeed));
+        //texture2D in GLSL needs a sampler2D and vec2 that corresponds to texture coordinates?
+		vec4 c = texture(_DynamicRippleTexture, vec2(0, 0)); //TOOK OUT IN.uv_DynamicRippleTexture + frac(Tmh * waterSpeed)
+		vec4 c2 = texture(_DynamicRippleTexture, vec2(0, 0)); //TOOK OUT IN.uv_DynamicRippleTexture * 1.3 + frac(Tmh * waterSpeed)
 
-		c = (C + c2) * 0.5;
+		c = (c + c2) * 0.5;
 		vec3 normal = vec3(c.x, c.y, 1) * 2.0 - 1.0;
 		normal.z = sqrt(1 - clamp(dot(normal.xy, normal.xy), 0.0, 1.0) );
 		float foam = lerp(0.4, 0.6, c.z * c.z);
@@ -55,15 +56,15 @@
 				vec3 worldTangent;
 				vec3 worldBinormal;
 
-				vec4 ripples = WaterRipples(In.worldPos, worldNormal);
+				vec4 cal_ripples = WaterRipples(psIn.worldPosition, worldNormal);
 		
 				vec2 rippleNormal;
-				rippleNormal.x = dot(worldTangent, vec3(ripples.x, 0, ripples.y));
-				rippleNormal.y = dot(worldBinormal, vec3(ripples.x, 0, ripples.y));
+				rippleNormal.x = dot(worldTangent, vec3(cal_ripples.x, 0, cal_ripples.y));
+				rippleNormal.y = dot(worldBinormal, vec3(cal_ripples.x, 0, cal_ripples.y));
 
 				normal.xy += rippleNormal;
-				foam += ripples.z * 5.0;
-				height += ripples.w;
+				foam += cal_ripples.z * 5.0;
+				height += cal_ripples.w;
 
 
 		foam = lerp(0.45, 0.55, foam);
@@ -72,11 +73,11 @@
 
 
 
-		float transparency = opacity;
+		float transparency = TransparencyStd;
 		transparency = clamp(transparency, 0.0, 1.0);	// keep 0-1 range
 
-		vec3 col = lerp(_Color.rgb, _Color2.rgb, height);
-		col = lerp(waterColor, _FoamColor.rgb, foam);
+		vec3 col = lerp(DiffuseColor, DarkColor, height);
+		col = lerp(col, SpecularColor, foam);
 
 		colorOut = vec4(col, transparency);
 
