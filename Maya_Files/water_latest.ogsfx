@@ -281,20 +281,35 @@ float extraScale = 5.0;
 string handlesConsolidatedGeometry = "false";
 >
 {
-  // pass p0
+   pass p0
+    {
+        VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+        PixelShader (in vs_to_ps psIn, out ps_output) = FS;
+    }
+
+    //COMBINE FOR LATER
+	//pass CombinedRippleEffect
     //{
-      //  VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
-       // PixelShader (in vs_to_ps psIn, out ps_output) = FS;
+      //  VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
+       // PixelShader (in vs_to_rs psIn, out rs_output) = RS;
     //}
-	pass p1
+}
+
+//*****************************//*****************************
+//GIVE RIPPLES A SEPARATE TECHNIQUE FOR DEBUGGING
+technique RippleEffect
+<
+string Transparency = "Transparent";
+float extraScale = 5.0;
+string handlesConsolidatedGeometry = "false";
+>
+{
+    pass Ripples
     {
         VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
         PixelShader (in vs_to_rs psIn, out rs_output) = RS;
     }
 }
-
-
-
 //*****************************//*****************************
 
 technique NormalView
