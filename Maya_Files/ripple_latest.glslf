@@ -27,58 +27,34 @@
 	}
 
 
-//	void surf (Input IN, input SurfaceOutputStandard o) {
-//		vec4 c = texture2D(_MainTex, IN.uv_MainTex  + frac(Tmh * waterSpeed));
-//		vec4 c2 = texture2D(_MainTex, IN.uv_MainTex * 1.3 + frac(Tmh * waterSpeed));
-
-//		c = (c + c2) * 0.5;
-//		vec3 normal = vec3(c.x, c.y, 1) * 2.0 - 1.0;
-//		normal.z = sqrt(1 - clamp(dot(normal.xy, normal.xy), 0.0, 1.0) );
-//		float foam = lerp(0.4, 0.6, c.z * c.z);
-//		float height = c.w;
-//	}
-   
-
    void main()
     {
+vec2 inTex = vec4(rsIn.worldPosition, 1.0f).xy;
+
+vec2 t1 = inTex * texScale*.8 + vec2(0.0f, -waterSpeed * Ripple_Speed) * Tmh;
+vec2 t2 = inTex * texScale + vec2(0.0f, -waterSpeed * Ripple_Speed) * Tmh;
+vec2 t3 = inTex * texScale * 1.3 + vec2(0.0f, -waterSpeed * Ripple_Speed) * Tmh;
+//scales the water height to right cube dimensions
+vec3 c1 = texture2D(_DynamicRippleTexture, t1).xyz;
+vec3 c2 = texture2D(_DynamicRippleTexture, t2).xyz;
+vec3 c3 = texture2D(_DynamicRippleTexture, t3).xyz;
+
+vec3 cTotal = (1.1 * (c1) + 0.9 * (c2) + 0.8 * (c3) )/ 3;
+
+
         //texture2D in GLSL needs a sampler2D and vec2 that corresponds to texture coordinates?
         vec4 c = texture(_DynamicRippleTexture, rsIn.worldPosition.xy + frac(Tmh * waterSpeed));
-        vec4 c2 = texture(_DynamicRippleTexture, rsIn.worldPosition.xy * 1.3 + frac(Tmh * waterSpeed));
-
-		c = (c + c2) * 0.5;
-		vec3 normal = vec3(c.x, c.y, 1) * 2.0 - 1.0;
-		normal.z = sqrt(1 - clamp(dot(normal.xy, normal.xy), 0.0, 1.0) );
-		float foam = smoothstep(0.4, 0.6, c.z * c.z);
-		float height = c.w;
-
-			// "#ifdef DYNAMIC_RIPPLES_ON"
-				vec3 worldNormal;
-				vec3 worldTangent;
-				vec3 worldBinormal;
-
-				vec4 cal_ripples = WaterRipples(rsIn.worldPosition, worldNormal);
-		
-				vec2 rippleNormal;
-				rippleNormal.x = dot(worldTangent, vec3(cal_ripples.x, 0, cal_ripples.y));
-				rippleNormal.y = dot(worldBinormal, vec3(cal_ripples.x, 0, cal_ripples.y));
-
-				normal.xy += rippleNormal;
-				foam += cal_ripples.z * 5.0;
-				height += cal_ripples.w;
-
-
-		foam = smoothstep(0.45, 0.55, foam);
-		height = height + (normal.x * 0.5) - (normal.y * 0.5);
-		height = smoothstep(0.5, 0.55, height);
-
-
 
 		float transparency = TransparencyStd;
-		transparency = clamp(transparency, 0.0, 1.0);	// keep 0-1 range
+		//transparency = clamp(transparency, 0.0, 1.0);	// keep 0-1 range
 
-		vec3 col = lerp(DiffuseColor, DarkColor, height);
-		col = lerp(col, SpecularColor, foam);
+		//vec3 col = lerp(DiffuseColor, DarkColor, height);
+		//col = lerp(col, SpecularColor, foam);
 
-		colorOut = vec4(col, transparency);
+if (c.x < 0.001 && c.y < 0.001 && c.z < 0.001) {
+    transparency = 0;
+}
+
+		colorOut = vec4(cTotal, transparency);
 
     }

@@ -29,17 +29,14 @@
         
         vec4 worldPos = w_matrix * INP;
         vsOut.worldPosition.xyz = worldPos.xyz;
-        //vsOut.uv_DynamicRippleTexture =
+
         
-        
-//        vsOut.worldNormal = (gWXf * vec4(vNormalTotal,0.0)).xyz;
         vsOut.worldNormal;
         vsOut.worldTangent = normalize( w_matrix * vec4(in_tangent,0.0) );
-//        vsOut.amCol = vec4(vNormalTotal, vDispTotal);
         vsOut.amCol;
         vsOut.col_col0 = in_color0;
-		//vsOut.waveamp = WaveAmplitude;
 		vsOut.vDisp = vDispTotal;
+        vsOut.in_position = in_position;
     }
 
 

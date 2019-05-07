@@ -8,8 +8,7 @@
 		
 		float opacity = 1.0f-TransparencyStd;
 		
-		//float spec = dot(clamp(SpecularColor, 0.0, 1.0), vec3(0.3f, 0.6f, 0.1f));
-		//float transparency = (spec) + opacity;
+
 		float transparency = opacity;
 		transparency = clamp(transparency, 0.0, 1.0);	// keep 0-1 range
 		
@@ -24,7 +23,7 @@
 		}
 
 		else if (psIn.vDisp <= lower_cutoff) {
-			color = vec4(DiffuseColor - DarkColor, transparency);
+            color = vec4(DarkColor, transparency); //vec4(DiffuseColor - DarkColor, transparency);
 		}
 
 		#if GL_ES

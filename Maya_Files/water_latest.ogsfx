@@ -117,7 +117,7 @@ uniform sampler2D gSeaNormalMapSamp = sampler_state
 //*****************************
 uniform texture2D gRippleMap  <
 	string UIGroup = "Ripple";
-    string ResourceName = "ripple.jpg";
+    //string ResourceName = "texture_1.png";
     string ResourceType = "2D";
     string UIName = "Ripple Texture Map";
 	int mipmaplevels = 0;
@@ -130,6 +130,7 @@ uniform sampler2D _DynamicRippleTexture = sampler_state
 };
 uniform mat4 _DynamicRippleMatrix;
 uniform float _DynamicRippleSize;
+uniform float Ripple_Speed;
 
 
 //*****************************
@@ -161,6 +162,8 @@ attribute vs_to_ps
 	float vDisp : VDISPLACE;
 	//vec4 inp_output : INPOS;
 	//float waveamp : WaveAmplitude;
+    vec3 in_position : POSITION;
+
 }
 
 attribute ps_output 
@@ -184,10 +187,12 @@ attribute vs_to_rs
 
 	float vDisp : VDISPLACE;
 
-//vec3 uv_DynamicRippleTexture : TEXCOORD4;
+    //vec3 uv_DynamicRippleTexture : TEXCOORD4;
     //sampler2D _DynamicRippleTexture :  dynamicRippleTexture;
 	//vec4 inp_output : INPOS;
 	//float waveamp : WaveAmplitude;
+    vec3 in_position : POSITION;
+
 }
 attribute rs_output 
 {
@@ -215,6 +220,13 @@ GLSLShader FS
 GLSLShader RS
 {
 #include "ripple_latest.glslf"
+    //float frac(float thing) {
+        //return thing - floor(thing);
+    //}
+    //void main () {
+        //vec4 c = texture(_DynamicRippleTexture, rsIn.worldPosition.xy + frac(Tmh * waterSpeed));
+        //colorOut = c;
+   // }
 }
 
 
@@ -289,11 +301,11 @@ string handlesConsolidatedGeometry = "false";
     }
 
     //COMBINE FOR LATER
-	//pass CombinedRippleEffect
-    //{
-      //  VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
-       // PixelShader (in vs_to_rs rsIn, out rs_output) = RS;
-    //}
+	pass CombinedRippleEffect
+    {
+      VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
+       PixelShader (in vs_to_rs rsIn, out rs_output) = RS;
+    }
 }
 
 //*****************************//*****************************
@@ -311,6 +323,30 @@ string handlesConsolidatedGeometry = "false";
         PixelShader (in vs_to_rs rsIn, out rs_output) = RS;
     }
 }
+//*****************************//*****************************
+
+technique JustWater
+<
+//tell Maya to support transparency for this technique
+string Transparency = "Transparent";
+
+// Enlarge BBox to follow displacement -- prevents the object to be discarded when moved at the edge of the viewport
+float extraScale = 5.0;
+
+// Disable consolidation -- the pixel shading algorithm uses the world matrix
+// which would be modified if consolidation was activated
+string handlesConsolidatedGeometry = "false";
+>
+{
+pass p0
+{
+
+VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
+PixelShader (in vs_to_ps psIn, out ps_output) = FS;
+}
+
+}
+
 //*****************************//*****************************
 
 technique NormalView
