@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: maya_test.ma
-//Last modified: Mon, May 06, 2019 10:01:41 PM
+//Last modified: Tue, May 07, 2019 12:29:15 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -18,13 +18,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "585543F5-4B60-FF72-9B35-DF86E8FC2F4E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.1682625278099898 3.5283034561099447 -3.1704276559621465 ;
-	setAttr ".r" -type "double3" -27.338352733605245 3357.3999999901512 0 ;
+	setAttr ".t" -type "double3" 5.3789756913193925 2.7248653846644681 -1.7927772365298398 ;
+	setAttr ".r" -type "double3" -26.138352733446801 3348.5999999885626 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3CAD3A76-44CA-5576-387E-E3B88F5C939F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 7.7553500338997399;
+	setAttr ".coi" 8.457178498407055;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -34688,19 +34688,19 @@ createNode rmanDisplayChannel -n "a";
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "09D737B8-9C4E-F9CD-C588-0497FEA473BB";
+	rename -uid "FBCAA642-7D4F-788B-9536-05824E2E9183";
 	setAttr -s 8 ".lnk";
 	setAttr -s 8 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "097ADDD3-244A-2D95-9585-FBA5BAED5101";
+	rename -uid "DA02CD40-E246-3BAF-F3FC-96BF2B78BEF6";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3F6314F0-A045-2A95-E7BD-9A8CBB902F47";
+	rename -uid "A9E8B993-A548-6636-72EB-C492E96CFB91";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8C475BE4-1B4F-7FC2-879F-C88BF5486741";
+	rename -uid "AFA916F9-7C4B-C3A8-0311-DAA2DF02F106";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "ECC39EBE-4605-A17E-560B-E8AD9FFE9159";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4C4F8552-6D47-6B62-FEFC-4BA6A2A6F274";
+	rename -uid "46ED7042-684F-B27B-ABB4-03AC97B71EFF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "85F14A70-4F41-BD28-9899-919630F446D2";
 	setAttr ".g" yes;
@@ -34819,18 +34819,6 @@ createNode GLSLShader -n "GLSLShader1";
 		-dt "string" -p "Color0";
 	addAttr -is true -ci true -sn "Color0_DefaultTexture" -ln "Color0_DefaultTexture" 
 		-ct "HW_shader_parameter" -dt "string" -p "Color0";
-	addAttr -is true -ci true -h true -sn "DarkColor_Name" -ln "DarkColor_Name" -ct "HW_shader_parameter" 
-		-dt "string";
-	addAttr -is true -ci true -h true -sn "DarkColor_Type" -ln "DarkColor_Type" -ct "HW_shader_parameter" 
-		-dt "string";
-	addAttr -is true -ci true -sn "DarkColor" -ln "DarkColor" -nn "Dark Color" -ct "HW_shader_parameter" 
-		-at "float3" -nc 3;
-	addAttr -is true -ci true -sn "DarkColorX" -ln "DarkColorX" -ct "HW_shader_parameter" 
-		-min 0 -max 1 -at "float" -p "DarkColor";
-	addAttr -is true -ci true -sn "DarkColorY" -ln "DarkColorY" -ct "HW_shader_parameter" 
-		-dv 0.25 -min 0 -max 1 -at "float" -p "DarkColor";
-	addAttr -is true -ci true -sn "DarkColorZ" -ln "DarkColorZ" -ct "HW_shader_parameter" 
-		-dv 0.25 -min 0 -max 1 -at "float" -p "DarkColor";
 	addAttr -is true -ci true -h true -sn "gsHWSIsObjectLevel_Name" -ln "gsHWSIsObjectLevel_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "gsHWSIsObjectLevel_Type" -ln "gsHWSIsObjectLevel_Type" 
@@ -34929,10 +34917,22 @@ createNode GLSLShader -n "GLSLShader1";
 		-smn 0 -smx 1 -at "float" -p "gRippleMap";
 	addAttr -is true -ci true -sn "gRippleMapB" -ln "gRippleMapB" -ct "HW_shader_parameter" 
 		-smn 0 -smx 1 -at "float" -p "gRippleMap";
+	addAttr -is true -ci true -h true -sn "DarkColor_Name" -ln "DarkColor_Name" -ct "HW_shader_parameter" 
+		-dt "string";
+	addAttr -is true -ci true -h true -sn "DarkColor_Type" -ln "DarkColor_Type" -ct "HW_shader_parameter" 
+		-dt "string";
+	addAttr -is true -ci true -uac -sn "DarkColor" -ln "DarkColor" -nn "Dark Color" 
+		-ct "HW_shader_parameter" -at "float3" -nc 3;
+	addAttr -is true -ci true -sn "DarkColorR" -ln "DarkColorR" -ct "HW_shader_parameter" 
+		-min 0 -max 1 -at "float" -p "DarkColor";
+	addAttr -is true -ci true -sn "DarkColorG" -ln "DarkColorG" -ct "HW_shader_parameter" 
+		-dv 0.25 -min 0 -max 1 -at "float" -p "DarkColor";
+	addAttr -is true -ci true -sn "DarkColorB" -ln "DarkColorB" -ct "HW_shader_parameter" 
+		-dv 0.25 -min 0 -max 1 -at "float" -p "DarkColor";
 	setAttr ".vpar" -type "stringArray" 3 "Position" "Color0" "Tangent"  ;
 	setAttr ".upar" -type "stringArray" 21 "Tmh" "xDynamicRippleSize" "gsHWSIsObjectLevel" "gsHWSPrimitiveBase" "gsSolidColor" "gsValidSolidColor" "gsFatLineScreenSize" "gsFatLineWidth" "gsFatPointScreenSize" "gsFatPointSize" "DiffuseColor" "SpecularColor" "DarkColor" "CutoffSize" "WaveAmplitude" "TransparencyStd" "texScale" "waterSpeed" "gHeightMap" "gRippleMap" "gSeaNormalMap"  ;
 	setAttr ".s" -type "string" "/Users/abbyrcohn/Desktop/finalProject_waterCelShader/Maya_Files/water_latest.ogsfx";
-	setAttr ".t" -type "string" "Main";
+	setAttr ".t" -type "string" "RippleEffect";
 	setAttr ".Light_0_use_implicit_lighting" no;
 	setAttr ".Position_Name" -type "string" "Position";
 	setAttr ".Position_Source" -type "string" "position";
@@ -34940,7 +34940,7 @@ createNode GLSLShader -n "GLSLShader1";
 	setAttr ".Tangent_Source" -type "string" "tangent:map1";
 	setAttr ".Tmh_Name" -type "string" "Tmh";
 	setAttr ".Tmh_Type" -type "string" "float";
-	setAttr ".Tmh" 2.4583332538604736;
+	setAttr ".Tmh" 4.9583334922790527;
 	setAttr ".WaveAmplitude_Name" -type "string" "WaveAmplitude";
 	setAttr ".WaveAmplitude_Type" -type "string" "float";
 	setAttr ".WaveAmplitude" 0.69871795177459717;
@@ -34967,9 +34967,6 @@ createNode GLSLShader -n "GLSLShader1";
 	setAttr ".SpecularColor" -type "float3" 0.21232876 0.21232876 0.21232876 ;
 	setAttr ".Color0_Name" -type "string" "Color0";
 	setAttr ".Color0_Source" -type "string" "color:colorSet";
-	setAttr ".DarkColor_Name" -type "string" "DarkColor";
-	setAttr ".DarkColor_Type" -type "string" "color3x1";
-	setAttr ".DarkColor" -type "float3" 0.5958904 0.5958904 0.5958904 ;
 	setAttr ".gsHWSIsObjectLevel_Name" -type "string" "gsHWSIsObjectLevel";
 	setAttr ".gsHWSIsObjectLevel_Type" -type "string" "bool";
 	setAttr ".gsHWSIsObjectLevel" no;
@@ -35004,6 +35001,9 @@ createNode GLSLShader -n "GLSLShader1";
 	setAttr ".gRippleMap_Name" -type "string" "gRippleMap";
 	setAttr ".gRippleMap_Type" -type "string" "texture";
 	setAttr ".gRippleMap" -type "float3" 0 0 0 ;
+	setAttr ".DarkColor_Name" -type "string" "DarkColor";
+	setAttr ".DarkColor_Type" -type "string" "color3x1";
+	setAttr ".DarkColor" -type "float3" 0.5958904 0.5958904 0.5958904 ;
 createNode shadingEngine -n "GLSLShader1SG";
 	rename -uid "5951615E-47C1-EF88-654F-C79A73A9EFE2";
 	setAttr ".ihi" 0;
@@ -35017,13 +35017,13 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 319\n            -height 169\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 319\n            -height 168\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 319\n            -height 168\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
@@ -35954,8 +35954,8 @@ createNode file -n "file5";
 createNode place2dTexture -n "place2dTexture5";
 	rename -uid "F9CCF458-534B-F46B-C9FC-62B9D0AFA55C";
 select -ne :time1;
-	setAttr ".o" 59;
-	setAttr ".unw" 59;
+	setAttr ".o" 119;
+	setAttr ".unw" 119;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1

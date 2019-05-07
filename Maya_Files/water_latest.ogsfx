@@ -76,7 +76,7 @@ uniform vec3 DarkColor : Ambient
 
 uniform texture2D gHeightMap  <
 	string UIGroup = "Misc";
-    string ResourceName = "ripple.png";
+    string ResourceName = "SeaHeightMap.jpg";
     string ResourceType = "2D";
     string UIName = "Sea Height Map";
 	int mipmaplevels = 0;
@@ -104,8 +104,6 @@ uniform sampler2D gSeaNormalMapSamp = sampler_state
     texture = <gSeaNormalMap>;
 };
 
-
-
 //*****************************
 // Helpful functions
 //*****************************
@@ -119,13 +117,13 @@ uniform sampler2D gSeaNormalMapSamp = sampler_state
 //*****************************
 uniform texture2D gRippleMap  <
 	string UIGroup = "Ripple";
-    string ResourceName = "SeaHeightMap.jpg";
+    string ResourceName = "ripple.jpg";
     string ResourceType = "2D";
     string UIName = "Ripple Texture Map";
 	int mipmaplevels = 0;
 	int UIOrder = 30;
-
 >;
+
 uniform sampler2D _DynamicRippleTexture = sampler_state
 {
 	texture = <gRippleMap>;
@@ -285,6 +283,7 @@ string handlesConsolidatedGeometry = "false";
 {
    pass p0
     {
+
         VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
         PixelShader (in vs_to_ps psIn, out ps_output) = FS;
     }
@@ -293,7 +292,7 @@ string handlesConsolidatedGeometry = "false";
 	//pass CombinedRippleEffect
     //{
       //  VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
-       // PixelShader (in vs_to_rs psIn, out rs_output) = RS;
+       // PixelShader (in vs_to_rs rsIn, out rs_output) = RS;
     //}
 }
 

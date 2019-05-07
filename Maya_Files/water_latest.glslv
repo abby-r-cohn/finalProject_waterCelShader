@@ -40,7 +40,6 @@
         vsOut.col_col0 = in_color0;
 		//vsOut.waveamp = WaveAmplitude;
 		vsOut.vDisp = vDispTotal;
-
     }
 
 
