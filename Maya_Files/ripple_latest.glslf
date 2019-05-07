@@ -48,7 +48,7 @@
 		c = (c + c2) * 0.5;
 		vec3 normal = vec3(c.x, c.y, 1) * 2.0 - 1.0;
 		normal.z = sqrt(1 - clamp(dot(normal.xy, normal.xy), 0.0, 1.0) );
-		float foam = lerp(0.4, 0.6, c.z * c.z);
+		float foam = smoothstep(0.4, 0.6, c.z * c.z);
 		float height = c.w;
 
 			// "#ifdef DYNAMIC_RIPPLES_ON"
@@ -67,9 +67,9 @@
 				height += cal_ripples.w;
 
 
-		foam = lerp(0.45, 0.55, foam);
+		foam = smoothstep(0.45, 0.55, foam);
 		height = height + (normal.x * 0.5) - (normal.y * 0.5);
-		height = lerp(0.5, 0.55, height);
+		height = smoothstep(0.5, 0.55, height);
 
 
 
@@ -79,6 +79,6 @@
 		vec3 col = lerp(DiffuseColor, DarkColor, height);
 		col = lerp(col, SpecularColor, foam);
 
-		colorOut = c;
+		colorOut = vec4(col, transparency);
 
     }
