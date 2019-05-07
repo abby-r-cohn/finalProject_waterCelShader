@@ -79,6 +79,6 @@
 		vec3 col = lerp(DiffuseColor, DarkColor, height);
 		col = lerp(col, SpecularColor, foam);
 
-		colorOut = vec4(col, transparency);
+		colorOut = c;
 
     }
