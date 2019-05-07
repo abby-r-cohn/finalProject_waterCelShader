@@ -69,9 +69,9 @@ uniform vec3 DarkColor : Dark
 <
 	string UIGroup = "Colors";
 	string UIName = "Dark Color";
-    string UIWidget = "ColorPicker";
+	string UIWidget = "ColorPicker";
 	int UIOrder = 12;
-> = {0.0f, 0.25f, 0.25f };
+> = {0.0f, 0.25f, 0.25f};
 
 
 uniform texture2D gHeightMap  <
@@ -105,8 +105,37 @@ uniform sampler2D gSeaNormalMapSamp = sampler_state
 };
 
 
+
 //*****************************
-// Vertex shader input structure.
+// Helpful functions
+//*****************************
+//float lerp(in float u0, in float u1, in float t) {
+//  return (1 - t) * u0 + t * u1;
+//}
+
+
+//*****************************
+// FOR THE RIPPLESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+//*****************************
+uniform texture2D rippleMap  <
+	string UIGroup = "Ripple";
+    string ResourceName = "ripple.png";
+    string ResourceType = "2D";
+    string UIName = "Ripple Texture Map";
+	int mipmaplevels = 0;
+	int UIOrder = 30;
+
+>;
+uniform sampler2D _DynamicRippleTexture = sampler_state
+{
+	texture = <rippleMap>;
+};
+uniform mat4 _DynamicRippleMatrix;
+uniform float _DynamicRippleSize;
+
+
+//*****************************
+// INPUT STRUCTURES
 //*****************************
 
 attribute vs_input
@@ -115,7 +144,7 @@ attribute vs_input
 	vec3 in_tangent : TANGENT; 
 	vec3 in_color0 : COLOR0;
 	
-	float vDisp : VDISPLACE;
+	//float vDisp : VDISPLACE;
 }
 
 // Vertex shader output structure.
@@ -141,6 +170,31 @@ attribute ps_output
     vec4 colorOut:COLOR0;
 }
 
+
+// Ripple shader output structure.
+attribute vs_to_rs
+{
+    // The vertex position in clip space.
+    vec4 HPos : SV_Position;
+		
+	vec3 worldNormal  : NORMAL;
+	vec4 worldTangent : TANGENT;
+	
+	vec3 worldPosition : TEXCOORD3;
+	vec4 amCol : COLOR;
+	vec3 col_col0 : COLOR;
+
+	float vDisp : VDISPLACE;
+    //sampler2D _DynamicRippleTexture :  dynamicRippleTexture;
+	//vec4 inp_output : INPOS;
+	//float waveamp : WaveAmplitude;
+}
+attribute rs_output 
+{
+    vec4 colorOut:COLOR0;
+}
+
+
 //*****************************
 // Including shaders
 //*****************************
@@ -156,6 +210,13 @@ GLSLShader FS
 {
 #include "water_latest.glslf"
 }
+
+// Ripple shader.
+GLSLShader RS
+{
+#include "ripple_latest.glslf"
+}
+
 
 // Pixel shader for norms
 GLSLShader PS_Normal
@@ -220,15 +281,35 @@ float extraScale = 5.0;
 string handlesConsolidatedGeometry = "false";
 >
 {
-    pass p0
+   pass p0
     {
         VertexShader (in vs_input, out vs_to_ps vsOut) = VS;
         PixelShader (in vs_to_ps psIn, out ps_output) = FS;
     }
+
+    //COMBINE FOR LATER
+	//pass CombinedRippleEffect
+    //{
+      //  VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
+       // PixelShader (in vs_to_rs psIn, out rs_output) = RS;
+    //}
 }
 
-
-
+//*****************************//*****************************
+//GIVE RIPPLES A SEPARATE TECHNIQUE FOR DEBUGGING
+technique RippleEffect
+<
+string Transparency = "Transparent";
+float extraScale = 5.0;
+string handlesConsolidatedGeometry = "false";
+>
+{
+    pass Ripples
+    {
+        VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
+        PixelShader (in vs_to_rs psIn, out rs_output) = RS;
+    }
+}
 //*****************************//*****************************
 
 technique NormalView
