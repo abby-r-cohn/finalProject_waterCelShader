@@ -29,6 +29,7 @@
         
         vec4 worldPos = w_matrix * INP;
         vsOut.worldPosition.xyz = worldPos.xyz;
+        //vsOut.uv_DynamicRippleTexture =
         
         
 //        vsOut.worldNormal = (gWXf * vec4(vNormalTotal,0.0)).xyz;

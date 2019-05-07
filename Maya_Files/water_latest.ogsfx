@@ -65,7 +65,7 @@ uniform vec3 SpecularColor : Specular
 	int UIOrder = 11;
 > = {0.0f, 0.10f, 0.10f };
 
-uniform vec3 DarkColor : Dark
+uniform vec3 DarkColor : Ambient
 <
 	string UIGroup = "Colors";
 	string UIName = "Dark Color";
@@ -76,7 +76,7 @@ uniform vec3 DarkColor : Dark
 
 uniform texture2D gHeightMap  <
 	string UIGroup = "Misc";
-    string ResourceName = "SeaHeightMap.jpg";
+    string ResourceName = "ripple.png";
     string ResourceType = "2D";
     string UIName = "Sea Height Map";
 	int mipmaplevels = 0;
@@ -117,9 +117,9 @@ uniform sampler2D gSeaNormalMapSamp = sampler_state
 //*****************************
 // FOR THE RIPPLESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 //*****************************
-uniform texture2D rippleMap  <
+uniform texture2D gRippleMap  <
 	string UIGroup = "Ripple";
-    string ResourceName = "ripple.png";
+    string ResourceName = "SeaHeightMap.jpg";
     string ResourceType = "2D";
     string UIName = "Ripple Texture Map";
 	int mipmaplevels = 0;
@@ -128,7 +128,7 @@ uniform texture2D rippleMap  <
 >;
 uniform sampler2D _DynamicRippleTexture = sampler_state
 {
-	texture = <rippleMap>;
+	texture = <gRippleMap>;
 };
 uniform mat4 _DynamicRippleMatrix;
 uniform float _DynamicRippleSize;
@@ -157,8 +157,8 @@ attribute vs_to_ps
 	vec4 worldTangent : TANGENT;
 	
 	vec3 worldPosition : TEXCOORD3;
-	vec4 amCol : COLOR;
-	vec3 col_col0 : COLOR;
+	vec4 amCol : COLOR1;
+	vec3 col_col0 : COLOR2;
 
 	float vDisp : VDISPLACE;
 	//vec4 inp_output : INPOS;
@@ -181,10 +181,12 @@ attribute vs_to_rs
 	vec4 worldTangent : TANGENT;
 	
 	vec3 worldPosition : TEXCOORD3;
-	vec4 amCol : COLOR;
-	vec3 col_col0 : COLOR;
+	vec4 amCol : COLOR1;
+	vec3 col_col0 : COLOR2;
 
 	float vDisp : VDISPLACE;
+
+//vec3 uv_DynamicRippleTexture : TEXCOORD4;
     //sampler2D _DynamicRippleTexture :  dynamicRippleTexture;
 	//vec4 inp_output : INPOS;
 	//float waveamp : WaveAmplitude;
@@ -307,7 +309,7 @@ string handlesConsolidatedGeometry = "false";
     pass Ripples
     {
         VertexShader (in vs_input, out vs_to_rs vsOut) = VS;
-        PixelShader (in vs_to_rs psIn, out rs_output) = RS;
+        PixelShader (in vs_to_rs rsIn, out rs_output) = RS;
     }
 }
 //*****************************//*****************************

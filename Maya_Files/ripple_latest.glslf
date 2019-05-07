@@ -42,8 +42,8 @@
    void main()
     {
         //texture2D in GLSL needs a sampler2D and vec2 that corresponds to texture coordinates?
-		vec4 c = texture(_DynamicRippleTexture, vec2(0, 0)); //TOOK OUT IN.uv_DynamicRippleTexture + frac(Tmh * waterSpeed)
-		vec4 c2 = texture(_DynamicRippleTexture, vec2(0, 0)); //TOOK OUT IN.uv_DynamicRippleTexture * 1.3 + frac(Tmh * waterSpeed)
+        vec4 c = texture(_DynamicRippleTexture, rsIn.worldPosition.xy + frac(Tmh * waterSpeed));
+        vec4 c2 = texture(_DynamicRippleTexture, rsIn.worldPosition.xy * 1.3 + frac(Tmh * waterSpeed));
 
 		c = (c + c2) * 0.5;
 		vec3 normal = vec3(c.x, c.y, 1) * 2.0 - 1.0;
@@ -56,7 +56,7 @@
 				vec3 worldTangent;
 				vec3 worldBinormal;
 
-				vec4 cal_ripples = WaterRipples(psIn.worldPosition, worldNormal);
+				vec4 cal_ripples = WaterRipples(rsIn.worldPosition, worldNormal);
 		
 				vec2 rippleNormal;
 				rippleNormal.x = dot(worldTangent, vec3(cal_ripples.x, 0, cal_ripples.y));
