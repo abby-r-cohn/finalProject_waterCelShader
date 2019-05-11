@@ -32,6 +32,7 @@
 vec2 inTex = vec4(rsIn.worldPosition, 1.0f).xy;
 
 vec2 t1 = inTex * texScale*.8 + vec2(0.0f, -waterSpeed * Ripple_Speed) * Tmh;
+
 vec2 t2 = inTex * texScale + vec2(0.0f, -waterSpeed * Ripple_Speed) * Tmh;
 vec2 t3 = inTex * texScale * 1.3 + vec2(0.0f, -waterSpeed * Ripple_Speed) * Tmh;
 //scales the water height to right cube dimensions

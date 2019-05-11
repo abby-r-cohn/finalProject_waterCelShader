@@ -47,6 +47,10 @@
 
 <p align="middle"> For this project, our team implemented a GLSL water shader in a cel-shaded style. Our initial goal was to create a shader that matches the flat shading style of a 3D animated short film that our group is a part of. We ended up creating the shader to be compatible with Maya with an ogsfx file format. We were able to get the parameters of wave height, transparency, color, and wave speed working with Maya’s user interface. This allows easy adjustment of the shader to fit the user’s needs. Next, we implemented one of two ideas for achieving the cel-shaded look. The first choice was to create our own custom texture that we would map onto a plane and animate with bump/displacement maps. The second plan did not require us to make a texture, but instead start with the geometry as a base diffuse color. Going with the second plan, we picked cutoffs for darker and lighter colors based on wave height for an ever-changing cel-shaded look. Our final goal of implementing water ripples was a bit trickier. It involved alpha blending with two different fragment shader files, since we wanted the ripples to lie on top of the existing shader. To wrap up the project, we built some scenes in Maya to demonstrate how the shader can be used. </p>
 
+<h2 align="middle">Technical Approach</h2>
+
+<p> </p> 
+
 <p> Below is the code format for each of the parameters, which are able to be toggled in the Maya user interface. </p>
 
   <p align="middle"><pre align="middle"> string UIGroup = "Diffuse";
