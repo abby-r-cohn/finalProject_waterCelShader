@@ -45,21 +45,34 @@
 
 <center>
 
-<p align="middle"> For this project, our team implemented a GLSL water shader in a cel-shaded style. Our initial goal was to create a shader that matches the flat shading style of a 3D animated short film that our group is a part of. We ended up creating the shader to be compatible with Maya with an ogsfx file format. We were able to get the parameters of wave height, transparency, color, and wave speed working with Maya’s user interface. This allows easy adjustment of the shader to fit the user’s needs. Next, we implemented one of two ideas for achieving the cel-shaded look. The first choice was to create our own custom texture that we would map onto a plane and animate with bump/displacement maps. The second plan did not require us to make a texture, but instead start with the geometry as a base diffuse color. Going with the second plan, we picked cutoffs for darker and lighter colors based on wave height for an ever-changing cel-shaded look. Our final goal of implementing water ripples was a bit trickier. It involved alpha blending with two different fragment shader files, since we wanted the ripples to lie on top of the existing shader. To wrap up the project, we built some scenes in Maya to demonstrate how the shader can be used. </p>
+<p align="middle"> For this project, our team implemented a GLSL water shader in a cel-shaded style. Our initial goal was to create a shader that matches the flat shading style of a 3D animated short film that our group is a part of. We ended up creating the shader to be compatible with Maya with an OGSFX file format. We were able to get the parameters of wave height, transparency, color, and wave speed working with Maya’s user interface. This allows easy adjustment of the shader to fit the user’s needs. Next, we implemented one of two ideas for achieving the cel-shaded look. The first choice was to create our own custom texture that we would map onto a plane and animate with bump/displacement maps. The second plan did not require us to make a texture, but instead start with the geometry as a base diffuse color. Going with the second plan, we picked cutoffs for darker and lighter colors based on wave height for an ever-changing cel-shaded look. Our final goal of implementing water ripples was a bit trickier. It involved the layering of two different fragment shader files, since we wanted the ripples to lie on top of the existing shader. To wrap up the project, we built some scenes in Maya to demonstrate how the shader can be used. </p>
 
 <h2 align="middle">Technical Approach</h2>
 
-<p> </p> 
+<p>Our approach began by looking into different shader examples online. We were greatly inspired by a Unity project that included ripples on top of the base shader, so from the start ripples were something we definitely wanted to include. Since we wanted to make a shader that could be used in animated short films, we looked into how GLSL is used in Maya. The GLSL shaders in Maya are defined using an OGSFX file format. The vertex and fragment files can either be written straight into the OGSFX file or added using an #include tag. We decided to compose the other files separately, since we knew we would be needing two vertex files: one for the base water and one for the ripples. Another element we noticed during our research phase was that most of the shaders had parameters that could be toggled, so we knew we wanted to include that feature in our own shader.</p>
 
-<p> Below is the code format for each of the parameters, which are able to be toggled in the Maya user interface. </p>
+<p>The first step of the base shader implementation was setting up the OGSFX file from an existing Maya shader and stripping it of its frag and vert info. Next, we set up our own vertex and fragment files. We started with the basic diffuse color as a medium blue in the fragment file. Next we picked color boundaries based on a height map we found online. We began with just two colors for our cutoff heights: the diffuse and the specular. The specular was defined by the wave amplitude and the cutoff size, which we outlined as parameters that could be toggled in the UI. Thus, the cutoffs can be customized by the user. Below is an example of an early iteration of the two-color shader with the base Maya animation. </p> 
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/spec_gif.gif" width="600px" />
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<p> Next, we added the dark color (lower cutoff), which is defined by the wave amplitude and cutoff size, but scaled by a factor of -2 to account for a larger region that the diffuse color will cover. We set the resulting out color to the diffuse + specular if the water height was above the upper cutoff and diffuse + dark color if it was below the lower cutoff. We also factored in transparency, making a UI toggle for it. We constrained the value of transparency between 0 and 1 using the built-in GLSL clamp function.</p>
+
+<p> Using the online Maya documentation, we learned how to toggle different features of the shader. We defined the UI widget, name, and group for each feature. Below is an example of the code format.</p>
 
   <p align="middle"><pre align="middle"> string UIGroup = "Diffuse";
 string UIName = "Diffuse Color";
 string UIWidget = "ColorPicker";
 int UIOrder = 203;
  = {0.0f, 0.5f, 1.0f }; </pre></p>
-
- <p> The next thing we added was all of the in/out variables in the fragment and vertex files. We have one for diffuse color, which acts as the base ocean color. The specular acts as the wave highlights, exemplified in our gifs below. The dark color variable produces the effect of shadows and depth in the shader.</p>
 
  <div align="middle">
   <table style="width=100%">
@@ -77,13 +90,18 @@ int UIOrder = 203;
   </table>
 </div>
 
-<p> We are pretty much on track with our schedule for implementing shader colors and animation. Something we have not begun implementing yet is the water-object interaction portion of the shader, but we do have a plan for adding it over the next week. We are still basing our implementation on the project we found online: <a href = "http://vfxmike.blogspot.com/2018/10/ripples-for-days.html
-"> Water Interaction Example</a> His approach was to render all the ripples from a camera looking down and re-project that texture onto his water surface. He composited height, normal and foam information into one shader, taking the ripple information and adding it to the existing water information. He did this in Unity, but we hope to replicate it with GLSL in Maya.</p>
+<h2 align="middle">Results</h2>
+
+<p> </p>
 
 <p> For more details on our progress take a look at our <a href="https://docs.google.com/presentation/d/1vdapy9iGkdWqIuVuVcQNETG1a7_3wJ1-yA7kXyxU05Q/edit#slide=id.g590873d484_0_327"> presentation slides</a>.</p>
 
 <p> Here is our
 <a href = "https://drive.google.com/file/d/1WwY4umKLODzxWmZ95AG_OvdjehRtmkn_/view?usp=sharing"> video </a>.</p>
+
+<h2 align="middle">References</h2>
+
+<h2 align="middle">Team Member Contributions</h2>
 
 
 
