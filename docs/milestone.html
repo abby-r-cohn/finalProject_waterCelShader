@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Avenir';
+    color: #000000;
+    background-color: #FFFFFF
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Avenir';
+  }
+</style>
+<title>CS 184 Water Cel Shader Milestone</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2019</h1>
+<br>
+<h1 align="middle">Final Project Milestone: Water Cel Shader</h1>
+<h2 align="middle">Abby Cohn, Ashna Choudhury, & Beverly Pan</h2>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/beach.png" width="450px" />
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<br> <br><br>
+
+<h2 align="middle">Project Overview</h2>
+
+<center>
+
+<p align="middle"> At this point in our project, we have come up with a clear plan to reach our goal of a water shader with a cel-shaded style. We initially came up with two possible routes of action and decided on one before implementing any code. The first choice was to create our own custom texture that we would map onto a plane and animate with bump/displacement maps. We would be able to toggle wave speed, map height, and other parameters. The second plan did not require us to make a texture, but instead start with the geometry as a base diffuse color. Based on varying height, we would pick cutoffs for darker/lighter colors for an ever-changing cel-shaded look.</p>
+
+<p>After weighing pros and cons, we decided to go with the second option, since we really liked the idea of a texture that changes with differences in height. Once picking this course of action, we explored ways to combine fragment and vertex shaders in ogsfx files, which are compatible with Maya. While we are still figuring out the ogsfx file, we have figured out how to add attribute wheels to toggle color, transparency, height, etc. in the Maya user interface. Maya has its own ogsfx water shader that we have been playing around with for inspiration. At this point, our shader's base code comes from the Maya shader and we are adding our own features to build on top of it. There is a parameter for transparency that we are in the process of implementing. </p>
+
+<p> Something we have already implemented for each parameter is the user interface aspect. The code snippet below is an example of the general format of each one: </p>
+
+  <p align="middle"><pre align="middle"> string UIGroup = "Diffuse";
+string UIName = "Diffuse Color";
+string UIWidget = "ColorPicker";
+int UIOrder = 203;
+ = {0.0f, 0.5f, 1.0f }; </pre></p>
+
+ <p> The next thing we added was all of the in/out variables in the fragment and vertex files. We have one for diffuse color, which acts as the base ocean color. The specular acts as the wave highlights, exemplified in our gifs below. The dark color variable produces the effect of shadows and depth in the shader.</p>
+
+ <div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/spec_gif.gif" width="500px" />
+                    <figcaption align="middle">Maya Cel Shader with our added code. We added the diffuse and specular in this version. </figcaption>
+      </td>
+      <td>
+         <img src="images/beach_gif.gif" width="475px" />
+                    <figcaption align="middle"> In this version, we added the transparency, specular, and dark values. </figcaption>
+      </td>
+    </tr>
+    <br>
+  </table>
+</div>
+
+<p> We are pretty much on track with our schedule for implementing shader colors and animation. Something we have not begun implementing yet is the water-object interaction portion of the shader, but we do have a plan for adding it over the next week. We are still basing our implementation on the project we found online: <a href = "http://vfxmike.blogspot.com/2018/10/ripples-for-days.html
+"> Water Interaction Example</a> His approach was to render all the ripples from a camera looking down and re-project that texture onto his water surface. He composited height, normal and foam information into one shader, taking the ripple information and adding it to the existing water information. He did this in Unity, but we hope to replicate it with GLSL in Maya.</p>
+
+<p> For more details on our progress take a look at our <a href="https://docs.google.com/presentation/d/1vdapy9iGkdWqIuVuVcQNETG1a7_3wJ1-yA7kXyxU05Q/edit#slide=id.g590873d484_0_327"> presentation slides</a>.</p>
+
+<p> Here is our
+<a href = "https://drive.google.com/file/d/1WwY4umKLODzxWmZ95AG_OvdjehRtmkn_/view?usp=sharing"> video </a>.</p>
+
+
+
+
+
+
