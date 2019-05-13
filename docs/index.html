@@ -1,24 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<style>
-  body {
-    padding: 100px;
-    width: 1000px;
-    margin: auto;
-    text-align: left;
-    font-weight: 300;
-    font-family: 'Avenir';
-    color: #000000;
-    background-color: #FFFFFF
-  }
-  h1, h2, h3, h4 {
-    font-family: 'Avenir';
-  }
-</style>
-<title>Water Cel Shader</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+    <style>
+        body {
+            padding: 100px;
+            width: 1000px;
+            margin: auto;
+            text-align: left;
+            font-weight: 300;
+            font-family: 'Open Sans', sans-serif;
+            color: #121212;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Avenir';
+        }
+    </style>
+    <title>Water Cel Shader</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -164,13 +166,14 @@ int UIOrder = 203;
 
 <p>Our Water Shader was heavily inspired by <a href = "https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya-LightingShading/files/GUID-F81B34C5-30B8-4784-8351-F252006C42D8-htm.html">Maya’s Water Simulation GLSL shader</a>. This is where we got the source code for understanding Maya’s UI as well as <a href = "https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya-LightingShading/files/GUID-41D74556-0699-4F4E-8382-F9E69FBFC158-htm.html">Scripting Custom Shaders in Maya</a> through GLSL and OGSFX files. We also borrowed elements from Maya’s shader to calculate factors such as the water animation and use of wave amplitude and speed. We took aspects of GLSL coding that we learned from Project 4 and applied it to Maya’s UI. To add the Ripple Effects we looked at <a href = "http://vfxmike.blogspot.com/2018/10/ripples-for-days.html">this</a>
  example that was created in Unity.</p>
+
 <h2 align="middle">Team Member Contributions</h2>
 
 <p> Abby: I was really excited about doing this project, since it is so related to the style of the short film that we’ve been working on. I implemented a few of the UI features and helped with researching the ripple implementation. I looked into the Unity project that we found and formulated a plan for the ripples from there. I assisted with converting the code to the OGSFX file format at the beginning of the project, as well. Modeling the Pooh and honey jar scene in Maya, I helped showcase a practical use of our shader. I created all of our ripple textures in photoshop during the final stage of the project. For the checkpoint, I made our video to showcase our progress. I also created the slideshow for our final presentation. </p>
 
 <p> Ashna: This project initially scared me a lot as I am not very used to doing computer science projects without a specific structure. As such, it took me a while to become fully comfortable and competent with the project as well as get used to the OGSFX and GLSL file formats. However, with the help of my teammates and with some time, I was able to better understand how OGSFX files are connected to vert and frag files and how they are then inputted into Maya. Throughout our project I did a lot of debugging between these three files and figured out the reasons why Maya would often error with certain commands or syntax missteps. Additionally, I helped debug problems with the ripple texture when it came to the direction and speed of the ripples. Finally, I helped a lot with the presentation and write up for both the milestone as well as the final submission. </p>
 
-
+<p> Beverly: I worked on researching how Maya reads and passes information into GLSL files. I found that we needed to create an OGSFX file, which can use separate (for style) GLSLV (vert)/GLSLF (frag) files. After creating our initial project setup with these files, I implemented the initial color cutoffs we used in the project milestone, as well as created the diorama we used to demonstrate the water shader. From then, I helped implement the ripple texture overlay, debugging an issue with transparent images and creating a workaround which uses a black color in lieu of transparency. </p>
 
 
 
